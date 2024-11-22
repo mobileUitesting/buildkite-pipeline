@@ -1,0 +1,16 @@
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "address1": "123 Main St",
+  "address2": "Apt 4B",
+  "city": "New York",
+  "state": "NY",
+  "zip": "10001",
+  "country": "USA",
+  "cardHolderName": "John-Doe",
+  "cardNumber": "12345678932312",
+  "expirationDate":"03/27",
+  "securityCode":"123",
+  "isSameShipping": true
+
+}
