@@ -5,7 +5,7 @@
 //  Created by Sreenath Mudigonda on 14/11/24.
 //
 
-enum AppConstants{
+struct AppConstants{
     static let LOGITUDE = "longitude"
     static let LATITIDE = "latitude"
     static let USER_DATA = "UserData"

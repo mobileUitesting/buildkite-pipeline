@@ -8,7 +8,7 @@
 import Foundation
 
 
-enum ErrorMessages{
+struct ErrorMessages{
     
     static let VALIDATION_MESSAGE_FOR_FULL_NAME = "Please provide your full name."
     static let VALIDATION_MESSAGE_FOR_ADDRESS_ONE = "Please provide your address."

@@ -10,9 +10,7 @@
 		25BE8B102CF86D1F00161180 /* BaseScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BE8B0D2CF86D1F00161180 /* BaseScreen.swift */; };
 		25BE8B112CF86D1F00161180 /* BaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BE8B0E2CF86D1F00161180 /* BaseTest.swift */; };
 		25BE8B172CF86D6300161180 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BE8B122CF86D6300161180 /* AppConstants.swift */; };
-		25BE8B182CF86D6300161180 /* ElementIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BE8B132CF86D6300161180 /* ElementIdentifiers.swift */; };
 		25BE8B192CF86D6300161180 /* ErrorMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BE8B142CF86D6300161180 /* ErrorMessages.swift */; };
-		25BE8B1A2CF86D6300161180 /* LogMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BE8B152CF86D6300161180 /* LogMessages.swift */; };
 		25BE8B2C2CF86D8100161180 /* MoreScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BE8B252CF86D8100161180 /* MoreScreen.swift */; };
 		25BE8B2D2CF86D8100161180 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BE8B242CF86D8100161180 /* LoginScreen.swift */; };
 		25BE8B2E2CF86D8100161180 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BE8B232CF86D8100161180 /* HomeScreen.swift */; };
@@ -96,9 +94,7 @@
 		25BE8B0D2CF86D1F00161180 /* BaseScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseScreen.swift; sourceTree = "<group>"; };
 		25BE8B0E2CF86D1F00161180 /* BaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTest.swift; sourceTree = "<group>"; };
 		25BE8B122CF86D6300161180 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
-		25BE8B132CF86D6300161180 /* ElementIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementIdentifiers.swift; sourceTree = "<group>"; };
 		25BE8B142CF86D6300161180 /* ErrorMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessages.swift; sourceTree = "<group>"; };
-		25BE8B152CF86D6300161180 /* LogMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogMessages.swift; sourceTree = "<group>"; };
 		25BE8B1F2CF86D8100161180 /* CartScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartScreen.swift; sourceTree = "<group>"; };
 		25BE8B202CF86D8100161180 /* CheckoutCompleteScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutCompleteScreen.swift; sourceTree = "<group>"; };
 		25BE8B212CF86D8100161180 /* CheckOutScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutScreen.swift; sourceTree = "<group>"; };
@@ -218,9 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				25BE8B122CF86D6300161180 /* AppConstants.swift */,
-				25BE8B132CF86D6300161180 /* ElementIdentifiers.swift */,
 				25BE8B142CF86D6300161180 /* ErrorMessages.swift */,
-				25BE8B152CF86D6300161180 /* LogMessages.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -792,11 +786,9 @@
 				25BE8B382CF86D8100161180 /* CartScreen.swift in Sources */,
 				25BE8B112CF86D1F00161180 /* BaseTest.swift in Sources */,
 				25BE8B172CF86D6300161180 /* AppConstants.swift in Sources */,
-				25BE8B182CF86D6300161180 /* ElementIdentifiers.swift in Sources */,
 				25BE8B192CF86D6300161180 /* ErrorMessages.swift in Sources */,
 				25BE8B652CF86DAC00161180 /* VerificationManager.swift in Sources */,
 				25BE8B542CF86D9900161180 /* LoginAndItemPurchaseTests.swift in Sources */,
-				25BE8B1A2CF86D6300161180 /* LogMessages.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
