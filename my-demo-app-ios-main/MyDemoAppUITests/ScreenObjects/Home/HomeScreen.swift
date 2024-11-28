@@ -17,7 +17,7 @@ class HomeScreen : BaseScreen {
         super.init(app: app)
         moreScreen = MoreScreen(app: app)
         loginScreen = LoginScreen(app: app)
-        userCredentialsTestData = JSONParser.loadTestData(from: AppConstants.LOGIN,ofType: UserCredentialsTestDataModel.self)
+        userCredentialsTestData = Helpers.loadTestData(from: AppConstants.LOGIN,ofType: UserCredentialsTestDataModel.self)
         productDetailScreen = ProductDetailScreen(app: app)
     }
     

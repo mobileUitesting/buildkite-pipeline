@@ -25,19 +25,15 @@ class Helpers {
         if element.exists && element.isHittable {
             element.tap()  // Tap to focus if necessary
             element.typeText(text)
-            //  TestLogger.shared.log("entered \(text) into \(element.label)")
         } else {
             XCTFail(ErrorMessages.ELEMENT_IS_NOT_TRACEABLE)
-            TestLogger.shared.log("Failed to enter text")
         }
     }
     static func getText(_ element: XCUIElement) -> String?{
         if element.exists && element.isHittable{
-            TestLogger.shared.log("Fetched \(element.label)")
             return element.label
         } else{
             XCTFail("\(element) \(ErrorMessages.DOES_NOT_EXISTS)")
-            TestLogger.shared.log("Fetching failed")
             return nil
         }
     }
@@ -48,5 +44,20 @@ class Helpers {
             element.typeText("\u{8}") // This is the backspace key
         }
     }
-    
+    static func loadTestData<T: Decodable>(from fileName: String, ofType type: T.Type = T.self) -> T? {
+        guard let url = Bundle(for: BaseTest.self).url(forResource: fileName, withExtension: "json") else {
+            print(ErrorMessages.TEST_DATA_NOT_FOUND)
+            return nil
+        }
+        do {
+            // Load the data from the file
+            let data = try Data(contentsOf: url)
+            let decoder = JSONDecoder()
+            let decodedData = try decoder.decode(T.self, from: data)
+            return decodedData
+        } catch {
+            print("\(ErrorMessages.FAILED_TO_LOAD): \(error)")
+            return nil
+        }
+    }
 }

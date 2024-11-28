@@ -23,4 +23,7 @@ enum ErrorMessages{
     static let ELEMENT_IS_NOT_TRACEABLE = "Element not interactable or does not exist"
     static let TEST_DATA_NOT_FOUND = "TestData.json not found in the test bundle."
     static let FAILED_TO_LOAD = "Failed to load data from TestData.json:"
+    static let INVALID_USERNAME_OR_PASSWORD = "Invalid username or password."
+    static let ERROR_MESSAGE_STATE = "Error message should appear after tapping Login button"
+    static let USERNAME_PASSWORD_DOESNOT_MATCH = "Username and password do not match any user in this service"
 }

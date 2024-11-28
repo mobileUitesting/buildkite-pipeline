@@ -12,7 +12,7 @@ class PlaceOrderScreen : BaseScreen {
     
     override init(app: XCUIApplication) {
         super.init(app: app)
-        userAddressTestData = JSONParser.loadTestData(from: AppConstants.ADDRESS,ofType: UserAddressModel.self)
+        userAddressTestData = Helpers.loadTestData(from: AppConstants.ADDRESS,ofType: UserAddressModel.self)
     }
     private lazy var name = app.staticTexts[userAddressTestData.fullName ?? ""]
     private lazy var address = app.staticTexts[userAddressTestData.addressOne ?? ""]

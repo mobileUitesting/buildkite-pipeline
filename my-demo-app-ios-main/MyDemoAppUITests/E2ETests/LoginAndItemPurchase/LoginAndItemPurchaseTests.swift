@@ -48,9 +48,9 @@ class LoginAndItemPurchaseTests: BaseTest {
     /// This functions loads dependent test data for the tests
     func loadTestData(){
        
-        userCredentialsTestData = JSONParser.loadTestData(from: AppConstants.LOGIN,ofType: UserCredentialsTestDataModel.self)
-        userAddressTestData = JSONParser.loadTestData(from: AppConstants.ADDRESS,ofType: UserAddressModel.self)
-        userCardDetailsTestData = JSONParser.loadTestData(from: AppConstants.CARD_DETAILS,ofType: UserCardDetailsModel.self)
+        userCredentialsTestData = Helpers.loadTestData(from: AppConstants.LOGIN,ofType: UserCredentialsTestDataModel.self)
+        userAddressTestData = Helpers.loadTestData(from: AppConstants.ADDRESS,ofType: UserAddressModel.self)
+        userCardDetailsTestData = Helpers.loadTestData(from: AppConstants.CARD_DETAILS,ofType: UserCardDetailsModel.self)
    
     }
     
