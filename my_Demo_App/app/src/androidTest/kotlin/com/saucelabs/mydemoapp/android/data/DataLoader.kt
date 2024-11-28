@@ -1,63 +1,71 @@
 package com.saucelabs.mydemoapp.android.data
 
-import com.saucelabs.mydemoapp.android.data.model.CheckoutInfo
-import com.saucelabs.mydemoapp.android.data.model.NewUser
-import com.saucelabs.mydemoapp.android.data.model.UserCredentials
-import com.saucelabs.mydemoapp.android.utils.parser.JsonParser1
-import com.saucelabs.mydemoapp.android.utils.parser.PropertyParser
+
+import com.saucelabs.mydemoapp.android.pageObjects.Helper.JsonParser
+import com.saucelabs.mydemoapp.android.pageObjects.Helper.PropertyParser
+import com.saucelabs.mydemoapp.android.data.model.LoginCredentials
+import com.saucelabs.mydemoapp.android.data.model.PaymentDetails
+import com.saucelabs.mydemoapp.android.data.model.ProductModel
+import com.saucelabs.mydemoapp.android.data.model.ShippingAddress
+import com.saucelabs.mydemoapp.android.data.model.UserDetails
 
 class DataLoader {
-    private lateinit var properties : PropertyParser
-    private lateinit var jsonloader:JsonParser1
-    //private val props = PropertyParser("login.properties")
-    fun getLoginCredentials(): UserCredentials {
-        properties= PropertyParser("login.properties")
-        val userEmail = properties.getPropertyValue("userEmail")
-        val password = properties.getPropertyValue("userPassword")
+    private lateinit var properties: PropertyParser
+    private lateinit var jsonloader: JsonParser
 
-        return UserCredentials(userEmail, password)
+
+    fun getLoginCredentials(): LoginCredentials {
+        jsonloader = JsonParser()
+        val loginDetails: LoginCredentials = jsonloader.parseJson("testdata/loginCredentials.json")
+        val userEmail = loginDetails.userEmail
+        val password = loginDetails.userPassword
+        val invalidUserEmail = loginDetails.invalidUserEmail
+        val invalidPassword = loginDetails.invalidUserPassword
+        return LoginCredentials(userEmail, password, invalidUserEmail, invalidPassword)
     }
 
-    fun getRegistrationDetails():NewUser{
-        properties= PropertyParser("registration.properties")
-        val fullName=properties.getPropertyValue("fullName")
-        val userEmail = properties.getPropertyValue("userEmail")
-        val password = properties.getPropertyValue("userPassword")
-        val wrongPassword = properties.getPropertyValue("wrongPassword")
-        val invalidPatternEmail = properties.getPropertyValue("invalidPatternEmail")
-        return NewUser(fullName,userEmail, password,wrongPassword,invalidPatternEmail)
+    fun getUserDetails(): UserDetails {
+        jsonloader = JsonParser()
+        val userDetails: UserDetails = jsonloader.parseJson("testdata/userDetails.json")
+        return UserDetails(
+            userDetails.firstName,
+            userDetails.lastName,
+            userDetails.email,
+            userDetails.phoneNumber
+        )
     }
 
+    fun getShippingAddressDetails(): ShippingAddress {
+        jsonloader = JsonParser()
+        val shippingAddressDetails: ShippingAddress =
+            jsonloader.parseJson("testdata/shippingAddress.json")
+        return ShippingAddress(
+            shippingAddressDetails.fullName,
+            shippingAddressDetails.address1,
+            shippingAddressDetails.address2,
+            shippingAddressDetails.city,
+            shippingAddressDetails.state,
+            shippingAddressDetails.zip,
+            shippingAddressDetails.country
+        )
+    }
 
-    fun getCheckInfoDetails():CheckoutInfo {
-        jsonloader=JsonParser1()
-       val checkInfoList: CheckoutInfo = jsonloader.parseJson("checkOutInfo.json")
-      /*  val firstName=checkInfoList.firstName
-        val lastName=checkInfoList.lastName
-        val address1=checkInfoList.address1
-        val address2=checkInfoList.address2
-        val city=checkInfoList.city
-        val state=checkInfoList.state
-        val zip=checkInfoList.zip
-        val country=checkInfoList.country
-        val cardHolderName=checkInfoList.cardHolderName
-        val cardNumber=checkInfoList.cardNumber
-        val expirationDate=checkInfoList.expirationDate
-        val securityCode=checkInfoList.securityCode
-        val isSameShipping=checkInfoList.isSameShipping*/
-     return checkInfoList
-   }
-    fun getUrls(): List<String> {
-        val itemsData = mutableListOf<String>()
-        properties= PropertyParser("url.properties")
-       /* val twiiter = properties.getPropertyValue("twitter")
-        val facebook = properties.getPropertyValue("facebook")
-        val linkedIn = properties.getPropertyValue("linkedin")
-        itemsData.add(twiiter)*/
-
-        itemsData.add( properties.getPropertyValue("twitter"))
-        itemsData.add( properties.getPropertyValue("facebook"))
-        itemsData.add( properties.getPropertyValue("linkedin"))
-        return itemsData
+    fun getPaymentDetails(): PaymentDetails {
+        jsonloader = JsonParser()
+        val paymentDetails: PaymentDetails = jsonloader.parseJson("testdata/paymentDetails.json")
+        return PaymentDetails(
+            paymentDetails.cardHolderName,
+            paymentDetails.cardNumber,
+            paymentDetails.expiredDate,
+            paymentDetails.securityCode
+        )
+    }
+    fun getProducts(): ProductModel {
+        jsonloader = JsonParser()
+        val products: ProductModel = jsonloader.parseJson("testdata/products.json")
+        return ProductModel(
+            products.product1,
+            products.product2,
+        )
     }
 }

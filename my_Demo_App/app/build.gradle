@@ -185,6 +185,11 @@ dependencies {
     implementation "androidx.camera:camera-view:${camerax_version}"
     implementation "com.google.zxing:core:3.3.3"
     implementation "org.jetbrains.kotlin:kotlin-reflect:2.0.21"
+
+    // Timber for logging (optional but useful)
+    implementation 'com.jakewharton.timber:timber:5.0.1'
+    // Kotlin logging library (optional)
+    implementation 'io.github.microutils:kotlin-logging:2.1.23'
 }
 
 apply plugin: 'com.google.gms.google-services'

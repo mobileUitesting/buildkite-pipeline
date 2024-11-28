@@ -45,6 +45,12 @@ public class ProductsAdapter extends RecyclerView.Adapter<ProductsAdapter.ViewHo
 
 		holder.binding.titleTV.setText(model.getTitle());
 		holder.binding.titleTV.setContentDescription("Product Title");
+	/*	holder.binding.titleTV.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				clickListener.OnClick(position, 1);
+			}
+		});*/
 		holder.binding.priceTV.setText(model.getCurrency() + " " + model.getPrice());
 		holder.binding.priceTV.setContentDescription("Product Price");
 		holder.handleRating(model.getRating());
