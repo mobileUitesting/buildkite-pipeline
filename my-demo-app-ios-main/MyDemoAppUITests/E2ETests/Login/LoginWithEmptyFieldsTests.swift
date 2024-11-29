@@ -8,23 +8,29 @@
 import XCTest
 
 final class LoginWithEmptyFieldsTests: BaseTest {
-
+    
     var homeScreen : HomeScreen!
     var moreScreen : MoreScreen!
     var loginScreen : LoginScreen!
-  //  var userCredentialsTestData: UserCredentialsTestDataModel!
     
     override func setUp() {
         super.setUp()
         loadScreens()
-       //loadTestData()
     }
-    
+    /// in this function loading the screens
     func loadScreens(){
-        
+        homeScreen = HomeScreen(app: app)
+        moreScreen = MoreScreen(app: app)
+        loginScreen = LoginScreen(app: app)
     }
     
     func testEmptyLogin(){
+        
+        homeScreen.tapOnMoreTab()
+        moreScreen.tapOnLogin()
+        loginScreen.tapOnLogin()
+        loginScreen.assertEmptyUserName()
+        loginScreen.tapOnAlertOkBtn()
         
     }
     

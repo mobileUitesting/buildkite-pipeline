@@ -13,6 +13,10 @@ class LoginScreen : BaseScreen {
     private lazy var passwordTextField = app.secureTextFields.firstMatch
     private lazy var loginButton = app.buttons[ElementIdentifiers.LOGIN]
     private lazy var errorMessageLabel = app.staticTexts[ErrorMessages.INVALID_USERNAME_OR_PASSWORD]
+    
+    private lazy var userNameRequired = app.staticTexts[ErrorMessages.USERNAME_REQUIRED]
+    private lazy var alertOk = app.alerts.buttons["OK"]
+    
     /// Logs in with the provided username and password.
     ///
     /// This function enters the username and password into their respective fields and taps on the login button to initiate the login process.
@@ -48,6 +52,14 @@ class LoginScreen : BaseScreen {
         let exists = errorMessageLabel.waitForExistence(timeout: 5)
         XCTAssertTrue(exists, ErrorMessages.ERROR_MESSAGE_STATE)
         XCTAssertEqual(errorMessageLabel.label, ErrorMessages.INVALID_USERNAME_OR_PASSWORD, ErrorMessages.USERNAME_PASSWORD_DOESNOT_MATCH)
+    }
+    
+    func assertEmptyUserName(){
+        XCTAssertTrue(userNameRequired.exists)
+    }
+    
+    func tapOnAlertOkBtn(){
+        Helpers.tapOnElement(alertOk)
     }
     
 }
