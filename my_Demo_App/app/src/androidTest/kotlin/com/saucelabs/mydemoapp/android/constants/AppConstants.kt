@@ -14,7 +14,7 @@ object AppConstants {
 
     //Logout
     const val LOGIN_TITLE="Login"
-    const val LOG_OUT = "LOG OUT"
+    const val LOG_OUT = "Log Out"
 
     const val CHECKOUT_COMPLETE="Checkout Complete"
     const val  TOTAL_ITEMS_2="2 Items"
