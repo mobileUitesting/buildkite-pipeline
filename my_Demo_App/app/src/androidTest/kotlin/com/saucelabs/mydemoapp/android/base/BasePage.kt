@@ -21,10 +21,8 @@ open class BasePage {
         handleView.performClick(sortIV)
     }
     fun clickCart() {
-       handleView.performClick(cartRL)
+        handleView.performClick(cartRL)
     }
-
-    // Clicking in Menu Icon
     fun clickMenu() {
         Wait.waitView(menuIV)
         handleView.performClick(menuIV)
