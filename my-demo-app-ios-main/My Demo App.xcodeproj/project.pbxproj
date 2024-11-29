@@ -30,6 +30,7 @@
 		25BE8B722CF8842300161180 /* CardDetails.json in Resources */ = {isa = PBXBuildFile; fileRef = 25BE8B712CF8842300161180 /* CardDetails.json */; };
 		25BE8B742CF8842D00161180 /* Address.json in Resources */ = {isa = PBXBuildFile; fileRef = 25BE8B732CF8842D00161180 /* Address.json */; };
 		291BC1DC2CF88C6300B0F974 /* LoginFailureWithInvalidCredentialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291BC1DB2CF88C6300B0F974 /* LoginFailureWithInvalidCredentialTests.swift */; };
+		2999D7512CF9923F00E6B194 /* VerifySortingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2999D7502CF9923F00E6B194 /* VerifySortingTests.swift */; };
 		2F0DE6BA26FB1D71008C6D63 /* Proxima Nova Font.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2F0DE6B926FB1D71008C6D63 /* Proxima Nova Font.otf */; };
 		2F0DE6BC26FB335E008C6D63 /* FontsFree-Net-Proxima-Nova-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2F0DE6BB26FB335E008C6D63 /* FontsFree-Net-Proxima-Nova-Bold.otf */; };
 		2F0DE6C026FB340C008C6D63 /* proximanova-semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2F0DE6BE26FB340B008C6D63 /* proximanova-semibold.otf */; };
@@ -114,6 +115,7 @@
 		25BE8B712CF8842300161180 /* CardDetails.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CardDetails.json; sourceTree = "<group>"; };
 		25BE8B732CF8842D00161180 /* Address.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Address.json; sourceTree = "<group>"; };
 		291BC1DB2CF88C6300B0F974 /* LoginFailureWithInvalidCredentialTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFailureWithInvalidCredentialTests.swift; sourceTree = "<group>"; };
+		2999D7502CF9923F00E6B194 /* VerifySortingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifySortingTests.swift; sourceTree = "<group>"; };
 		2F0DE6B926FB1D71008C6D63 /* Proxima Nova Font.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Proxima Nova Font.otf"; sourceTree = "<group>"; };
 		2F0DE6BB26FB335E008C6D63 /* FontsFree-Net-Proxima-Nova-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FontsFree-Net-Proxima-Nova-Bold.otf"; sourceTree = "<group>"; };
 		2F0DE6BE26FB340B008C6D63 /* proximanova-semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "proximanova-semibold.otf"; sourceTree = "<group>"; };
@@ -248,6 +250,7 @@
 		25BE8B4C2CF86D9900161180 /* E2ETests */ = {
 			isa = PBXGroup;
 			children = (
+				2999D74F2CF991EA00E6B194 /* Sorting */,
 				291BC1DE2CF88CDD00B0F974 /* Login */,
 				291BC1DD2CF88CB100B0F974 /* LoginAndItemPurchase */,
 			);
@@ -375,6 +378,14 @@
 				25BE8B292CF86D8100161180 /* ShippingAdressScreen.swift */,
 			);
 			path = ShippingAddress;
+			sourceTree = "<group>";
+		};
+		2999D74F2CF991EA00E6B194 /* Sorting */ = {
+			isa = PBXGroup;
+			children = (
+				2999D7502CF9923F00E6B194 /* VerifySortingTests.swift */,
+			);
+			path = Sorting;
 			sourceTree = "<group>";
 		};
 		2F45FB3826F1CC0100A13B16 = {
@@ -772,6 +783,7 @@
 				25BE8B6F2CF8740000161180 /* UserCardDetailsModel.swift in Sources */,
 				25BE8B102CF86D1F00161180 /* BaseScreen.swift in Sources */,
 				25BE8B2C2CF86D8100161180 /* MoreScreen.swift in Sources */,
+				2999D7512CF9923F00E6B194 /* VerifySortingTests.swift in Sources */,
 				25BE8B672CF871B200161180 /* UserCredentialsTestDataModel.swift in Sources */,
 				25BE8B612CF86DA300161180 /* Helpers.swift in Sources */,
 				25BE8B2D2CF86D8100161180 /* LoginScreen.swift in Sources */,

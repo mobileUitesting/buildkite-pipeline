@@ -43,6 +43,7 @@ class LoginScreen : BaseScreen {
         Helpers.tapOnElement(loginButton)
     }
     
+    //Failing the test case to as UI validation is not done on APP Level
     func assertErrorMessageIsDisplayed() {
         let exists = errorMessageLabel.waitForExistence(timeout: 5)
         XCTAssertTrue(exists, ErrorMessages.ERROR_MESSAGE_STATE)
