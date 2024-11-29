@@ -24,6 +24,7 @@ open class BasePage {
        handleView.performClick(cartRL)
     }
 
+    // Clicking in Menu Icon
     fun clickMenu() {
         Wait.waitView(menuIV)
         handleView.performClick(menuIV)
