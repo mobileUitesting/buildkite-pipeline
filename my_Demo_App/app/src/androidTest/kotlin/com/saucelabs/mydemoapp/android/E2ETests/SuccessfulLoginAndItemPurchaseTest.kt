@@ -10,7 +10,7 @@ import com.saucelabs.mydemoapp.android.data.model.PaymentDetails
 import com.saucelabs.mydemoapp.android.data.model.ProductModel
 import com.saucelabs.mydemoapp.android.data.model.ShippingAddress
 import com.saucelabs.mydemoapp.android.data.model.UserDetails
-import com.saucelabs.mydemoapp.android.pageObjects.BasePage
+import com.saucelabs.mydemoapp.android.base.BasePage
 import com.saucelabs.mydemoapp.android.pageObjects.CheckOutInfoPage
 import com.saucelabs.mydemoapp.android.pageObjects.Helper.VerificationManager
 import com.saucelabs.mydemoapp.android.pageObjects.HomePage

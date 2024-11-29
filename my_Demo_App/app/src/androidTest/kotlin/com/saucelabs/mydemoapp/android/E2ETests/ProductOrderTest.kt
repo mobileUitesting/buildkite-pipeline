@@ -8,7 +8,7 @@ import com.saucelabs.mydemoapp.android.data.model.LoginCredentials
 import com.saucelabs.mydemoapp.android.data.model.PaymentDetails
 import com.saucelabs.mydemoapp.android.data.model.ShippingAddress
 import com.saucelabs.mydemoapp.android.data.model.UserDetails
-import com.saucelabs.mydemoapp.android.pageObjects.BasePage
+import com.saucelabs.mydemoapp.android.base.BasePage
 import com.saucelabs.mydemoapp.android.pageObjects.CheckOutInfoPage
 import com.saucelabs.mydemoapp.android.pageObjects.HomePage
 import com.saucelabs.mydemoapp.android.pageObjects.LoginPage

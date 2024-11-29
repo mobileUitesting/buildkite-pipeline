@@ -1,4 +1,4 @@
-package com.saucelabs.mydemoapp.android.pageObjects
+package com.saucelabs.mydemoapp.android.base
 
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.ViewInteraction
@@ -7,9 +7,10 @@ import com.saucelabs.mydemoapp.android.R
 import com.saucelabs.mydemoapp.android.pageObjects.Helper.ViewActions
 import com.saucelabs.mydemoapp.android.pageObjects.Helper.Wait
 
-class BasePage {
+open class BasePage {
 
     private val handleView = ViewActions()
+
 
     private val menuIV: ViewInteraction = onView(withId(R.id.menuIV))
     private val sortIV: ViewInteraction = onView(withId(R.id.sortIV))

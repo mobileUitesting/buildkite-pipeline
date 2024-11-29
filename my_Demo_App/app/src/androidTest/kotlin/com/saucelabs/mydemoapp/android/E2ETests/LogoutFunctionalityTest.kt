@@ -6,7 +6,7 @@ import com.saucelabs.mydemoapp.android.constants.Messages
 import com.saucelabs.mydemoapp.android.constants.AppConstants
 import com.saucelabs.mydemoapp.android.data.DataLoader
 import com.saucelabs.mydemoapp.android.data.model.LoginCredentials
-import com.saucelabs.mydemoapp.android.pageObjects.BasePage
+import com.saucelabs.mydemoapp.android.base.BasePage
 import com.saucelabs.mydemoapp.android.pageObjects.LoginPage
 import com.saucelabs.mydemoapp.android.pageObjects.SideBarMenuPage
 import com.saucelabs.mydemoapp.android.utils.SingletonClass

@@ -97,7 +97,7 @@ class ViewActions {
         return itemsData
     }
 
-    fun clickRecyclerViewItemWithText(recyclerViewId: ViewInteraction, itemText: String) {
+    fun clickRecyclerViewItemWithText1(recyclerViewId: ViewInteraction, itemText: String) {
         recyclerViewId.perform(
             RecyclerViewActions.scrollTo<RecyclerView.ViewHolder>(
                 hasDescendant(allOf(withText(containsString(itemText))))
@@ -108,7 +108,7 @@ class ViewActions {
                 )
             )
     }
-    fun clickRecyclerViewItemWithText1(recyclerViewId: ViewInteraction, itemText: String) {
+    fun clickRecyclerViewItemWithText(recyclerViewId: ViewInteraction, itemText: String) {
         recyclerViewId.perform(
             RecyclerViewActions.scrollTo<RecyclerView.ViewHolder>(
                 hasDescendant(allOf(withText(itemText)))
@@ -121,7 +121,6 @@ class ViewActions {
     }
 
     fun getTextInRecyclerView(recyclerViewId: ViewInteraction, expectedText: String):String {
-
         try {
             recyclerViewId.perform(
                 RecyclerViewActions.scrollTo<RecyclerView.ViewHolder>(
