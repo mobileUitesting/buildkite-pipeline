@@ -1,17 +1,25 @@
 package com.saucelabs.mydemoapp.android.data
 
 
-import com.saucelabs.mydemoapp.android.pageObjects.Helper.JsonParser
-import com.saucelabs.mydemoapp.android.pageObjects.Helper.PropertyParser
+import com.saucelabs.mydemoapp.android.data.model.ConfigDetails
+import com.saucelabs.mydemoapp.android.utils.JsonParser
+import com.saucelabs.mydemoapp.android.utils.PropertyParser
 import com.saucelabs.mydemoapp.android.data.model.LoginCredentials
 import com.saucelabs.mydemoapp.android.data.model.PaymentDetails
 import com.saucelabs.mydemoapp.android.data.model.ProductModel
 import com.saucelabs.mydemoapp.android.data.model.ShippingAddress
 import com.saucelabs.mydemoapp.android.data.model.UserDetails
 
+
 class DataLoader {
     private lateinit var properties: PropertyParser
     private lateinit var jsonloader: JsonParser
+
+    fun getConfigDetails(): ConfigDetails{
+        properties= PropertyParser("config.properties")
+        val secretKey = properties.getPropertyValue("secretKey")
+        return ConfigDetails(secretKey)
+    }
 
 
     fun getLoginCredentials(): LoginCredentials {

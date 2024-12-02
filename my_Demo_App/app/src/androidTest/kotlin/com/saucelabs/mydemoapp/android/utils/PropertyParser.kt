@@ -1,4 +1,4 @@
-package com.saucelabs.mydemoapp.android.pageObjects.Helper
+package com.saucelabs.mydemoapp.android.utils
 
 import java.io.InputStream
 import java.util.Properties

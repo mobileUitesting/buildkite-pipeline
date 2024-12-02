@@ -1,6 +1,6 @@
 package com.saucelabs.mydemoapp.android.pageObjects.Helper
 
-import android.util.Log
+import com.saucelabs.mydemoapp.android.utils.Logger
 import org.junit.Assert
 
 class VerificationManager {

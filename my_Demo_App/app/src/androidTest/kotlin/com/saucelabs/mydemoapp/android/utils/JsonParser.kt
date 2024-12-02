@@ -1,4 +1,4 @@
-package com.saucelabs.mydemoapp.android.pageObjects.Helper
+package com.saucelabs.mydemoapp.android.utils
 
 import androidx.test.platform.app.InstrumentationRegistry
 

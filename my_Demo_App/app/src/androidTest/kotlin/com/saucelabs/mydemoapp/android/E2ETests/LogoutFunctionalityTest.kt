@@ -9,6 +9,7 @@ import com.saucelabs.mydemoapp.android.data.model.LoginCredentials
 import com.saucelabs.mydemoapp.android.base.BasePage
 import com.saucelabs.mydemoapp.android.pageObjects.LoginPage
 import com.saucelabs.mydemoapp.android.pageObjects.SideBarMenuPage
+import com.saucelabs.mydemoapp.android.utils.CryptoUtils.decrypt
 import com.saucelabs.mydemoapp.android.utils.SingletonClass
 import com.saucelabs.mydemoapp.android.view.activities.SplashActivity
 import org.junit.Before
@@ -42,7 +43,7 @@ class LogoutFunctionalityTest : BaseTest<SplashActivity>(SplashActivity::class.j
         basePage.clickMenu()
         sideBarMenu.logOut()
         verificationManager.verifyTextAndStopTest(
-            loginPage.getLoginText(), AppConstants.LOGIN_TITLE, Messages.VERIFY_LOGIN_TEXT
+        loginPage.getLoginText(), AppConstants.LOGIN_TITLE, Messages.VERIFY_LOGIN_TEXT
         )
     }
 
