@@ -29,6 +29,7 @@ class MoreScreen:BaseScreen {
     ///
     /// This function triggers a tap action on the `loginBtn` UI element.
     func tapOnLogin() {
+        TestLogger.shared.log("\(AppConstants.MORE_SCREEN): \(LogMessages.CLICKED_ON_LOGIN)")
         Helpers.tapOnElement(loginButton)
     }
     

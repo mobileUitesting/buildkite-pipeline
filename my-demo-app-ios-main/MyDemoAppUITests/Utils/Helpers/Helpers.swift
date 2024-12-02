@@ -19,6 +19,7 @@ class Helpers {
             element.tap()
         } else{
             XCTFail("\(element) \(ErrorMessages.DOES_NOT_EXISTS)")
+            TestLogger.shared.log(LogMessages.DOES_NOT_EXISTS)
         }
     }
     static func enterText(_ element: XCUIElement, text: String) {
@@ -27,6 +28,7 @@ class Helpers {
             element.typeText(text)
         } else {
             XCTFail(ErrorMessages.ELEMENT_IS_NOT_TRACEABLE)
+            TestLogger.shared.log(LogMessages.ELEMENT_IS_NOT_TRACEABLE)
         }
     }
     static func getText(_ element: XCUIElement) -> String?{
@@ -34,6 +36,7 @@ class Helpers {
             return element.label
         } else{
             XCTFail("\(element) \(ErrorMessages.DOES_NOT_EXISTS)")
+            TestLogger.shared.log(LogMessages.DOES_NOT_EXISTS)
             return nil
         }
     }
@@ -47,6 +50,7 @@ class Helpers {
     static func loadTestData<T: Decodable>(from fileName: String, ofType type: T.Type = T.self) -> T? {
         guard let url = Bundle(for: BaseTest.self).url(forResource: fileName, withExtension: "json") else {
             print(ErrorMessages.TEST_DATA_NOT_FOUND)
+            TestLogger.shared.log(ErrorMessages.TEST_DATA_NOT_FOUND)
             return nil
         }
         do {
@@ -57,6 +61,7 @@ class Helpers {
             return decodedData
         } catch {
             print("\(ErrorMessages.FAILED_TO_LOAD): \(error)")
+            TestLogger.shared.log("\(ErrorMessages.FAILED_TO_LOAD) : \(error)")
             return nil
         }
     }

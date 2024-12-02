@@ -112,6 +112,7 @@ class HomeScreen : BaseScreen {
     /// This function performs a tap action on a product item in the `productCellItem` list at the given index.
     func tapOnProduct(index: Int) {
         Helpers.tapOnElement(productCellItem.element(boundBy: index))
+        TestLogger.shared.log("HomeScreen: Tapped on \(index) product")
     }
     
     /// Taps on the lowest-priced product.
@@ -136,6 +137,7 @@ class HomeScreen : BaseScreen {
     ///
     /// This function selects the first product, increases its quantity, adds it to the cart, and calls the completion handler with the product name and price.
     func addToCart(index : Int = 0, completion: ((String, String) -> Void)? = nil) {
+       
         tapOnProduct(index: index)
         productDetailScreen.tapOnIncreaseButton()
         completion?(productDetailScreen.getProductName(), productDetailScreen.getProductPrice())
@@ -143,14 +145,24 @@ class HomeScreen : BaseScreen {
         tapOnCartTab()
     }
     
+    func getProductName() -> String{
+        return Helpers.getText(productName) ?? ""
+    }
+    
+    func getProductPrice() -> String{
+        return Helpers.getText(productCost) ?? ""
+    }
+  
+    
+    
     func addHeighestPricedItemToCart(){
         addToCart(index: 0)
     }
     
     func getItemDetails(at index : Int) -> (String,String) {
         let cell = collectionViewCell.element(boundBy: index)
-        let productName = cell.staticTexts[ElementIdentifiers.PRODUCT_NAME].label
-        let productCost = cell.staticTexts[ElementIdentifiers.PRODUCT_COST].label
+        let productName = Helpers.getText(cell.staticTexts[ElementIdentifiers.PRODUCT_NAME]) ?? ""
+        let productCost = Helpers.getText(cell.staticTexts[ElementIdentifiers.PRODUCT_COST]) ?? ""
         return (productName,productCost)
     }
     

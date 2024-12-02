@@ -20,5 +20,10 @@ class BaseTest: XCTestCase {
     override func tearDown() {
         app.terminate()
         super.tearDown()
+        TestLogger.shared.saveLogToFile()
+        if let logFileURL = TestLogger.shared.getLogFileURL() {
+            print("Log file URL: \(logFileURL.path)")
+        }
+        
     }
 }

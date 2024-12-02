@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		253553C42CFD767B00509C51 /* ProductDetailsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253553C32CFD767B00509C51 /* ProductDetailsTests.swift */; };
+		253554B72CFDC0DB00509C51 /* TestLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253554B52CFDC0DB00509C51 /* TestLogger.swift */; };
+		253554B92CFDC1E200509C51 /* LogMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253554B82CFDC1E200509C51 /* LogMessages.swift */; };
 		25BE8B102CF86D1F00161180 /* BaseScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BE8B0D2CF86D1F00161180 /* BaseScreen.swift */; };
 		25BE8B112CF86D1F00161180 /* BaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BE8B0E2CF86D1F00161180 /* BaseTest.swift */; };
 		25BE8B172CF86D6300161180 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BE8B122CF86D6300161180 /* AppConstants.swift */; };
@@ -93,6 +96,9 @@
 
 /* Begin PBXFileReference section */
 		0DB1B99658623646544D9A3B /* Pods-My Demo App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My Demo App.release.xcconfig"; path = "Target Support Files/Pods-My Demo App/Pods-My Demo App.release.xcconfig"; sourceTree = "<group>"; };
+		253553C32CFD767B00509C51 /* ProductDetailsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsTests.swift; sourceTree = "<group>"; };
+		253554B52CFDC0DB00509C51 /* TestLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLogger.swift; sourceTree = "<group>"; };
+		253554B82CFDC1E200509C51 /* LogMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogMessages.swift; sourceTree = "<group>"; };
 		25BE8B0D2CF86D1F00161180 /* BaseScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseScreen.swift; sourceTree = "<group>"; };
 		25BE8B0E2CF86D1F00161180 /* BaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTest.swift; sourceTree = "<group>"; };
 		25BE8B122CF86D6300161180 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
@@ -205,6 +211,22 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		253553C22CFD765900509C51 /* ProductDetails */ = {
+			isa = PBXGroup;
+			children = (
+				253553C32CFD767B00509C51 /* ProductDetailsTests.swift */,
+			);
+			path = ProductDetails;
+			sourceTree = "<group>";
+		};
+		253554B62CFDC0DB00509C51 /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				253554B52CFDC0DB00509C51 /* TestLogger.swift */,
+			);
+			path = Logger;
+			sourceTree = "<group>";
+		};
 		25BE8B0F2CF86D1F00161180 /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +241,7 @@
 			children = (
 				25BE8B122CF86D6300161180 /* AppConstants.swift */,
 				25BE8B142CF86D6300161180 /* ErrorMessages.swift */,
+				253554B82CFDC1E200509C51 /* LogMessages.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -252,6 +275,7 @@
 		25BE8B4C2CF86D9900161180 /* E2ETests */ = {
 			isa = PBXGroup;
 			children = (
+				253553C22CFD765900509C51 /* ProductDetails */,
 				2999D74F2CF991EA00E6B194 /* Sorting */,
 				291BC1DE2CF88CDD00B0F974 /* Login */,
 				291BC1DD2CF88CB100B0F974 /* LoginAndItemPurchase */,
@@ -282,6 +306,7 @@
 			children = (
 				25BE8B5A2CF86DA300161180 /* Models */,
 				25BE8B5C2CF86DA300161180 /* Helpers */,
+				253554B62CFDC0DB00509C51 /* Logger */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -786,6 +811,7 @@
 				25BE8B6F2CF8740000161180 /* UserCardDetailsModel.swift in Sources */,
 				25BE8B102CF86D1F00161180 /* BaseScreen.swift in Sources */,
 				25BE8B782CF98EA100161180 /* LoginWithEmptyFieldsTests.swift in Sources */,
+				253554B72CFDC0DB00509C51 /* TestLogger.swift in Sources */,
 				25BE8B2C2CF86D8100161180 /* MoreScreen.swift in Sources */,
 				2999D7512CF9923F00E6B194 /* VerifySortingTests.swift in Sources */,
 				25BE8B672CF871B200161180 /* UserCredentialsTestDataModel.swift in Sources */,
@@ -802,7 +828,9 @@
 				25BE8B382CF86D8100161180 /* CartScreen.swift in Sources */,
 				25BE8B112CF86D1F00161180 /* BaseTest.swift in Sources */,
 				25BE8B172CF86D6300161180 /* AppConstants.swift in Sources */,
+				253553C42CFD767B00509C51 /* ProductDetailsTests.swift in Sources */,
 				25BE8B192CF86D6300161180 /* ErrorMessages.swift in Sources */,
+				253554B92CFDC1E200509C51 /* LogMessages.swift in Sources */,
 				25BE8B652CF86DAC00161180 /* VerificationManager.swift in Sources */,
 				25BE8B542CF86D9900161180 /* LoginAndItemPurchaseTests.swift in Sources */,
 			);

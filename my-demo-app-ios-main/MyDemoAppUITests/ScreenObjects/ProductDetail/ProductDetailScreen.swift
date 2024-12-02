@@ -21,6 +21,10 @@ class ProductDetailScreen : BaseScreen{
     private lazy var countLbl = app.staticTexts[ElementIdentifiers.COUNT_LABEL]
     private lazy var alert = app.alerts.element
     private lazy var addToCartButton = app.buttons[ElementIdentifiers.ADD_TO_CART_BUTTON]
+    private lazy var backButton = app.buttons.element(boundBy: 0)
+    
+    let name = AppConstants.PRODUCT_DETAIL_SCREEN
+    
     
     /// Navigates to the product detail page.
     ///
@@ -91,6 +95,7 @@ class ProductDetailScreen : BaseScreen{
     /// This function triggers a tap action on the `increaseBtn` UI element to increase the product count.
     func tapOnIncreaseButton() {
         Helpers.tapOnElement(increaseButton)
+        TestLogger.shared.log("\(name): \(LogMessages.TAPPED_INCREASE_BUTTON)")
     }
     
     /// Taps on the "Decrease" button.
@@ -140,20 +145,28 @@ class ProductDetailScreen : BaseScreen{
     /// This function triggers a tap action on the `addToCartBtn` UI element to add the product to the cart.
     func tapOnAddToCart() {
         Helpers.tapOnElement(addToCartButton)
+        TestLogger.shared.log("\(name): \(LogMessages.TAPPED_ADD_TO_CART_BUTTON)")
     }
     
     /// Gets the product price as a string.
     ///
     /// This function returns the product price from the `productCost` label.
     func getProductPrice() -> String {
-        return productCost.label
+        
+        return Helpers.getText(productCost) ?? ""
     }
     
     /// Gets the product name as a string.
     ///
     /// This function returns the product name from the `productName` label.
     func getProductName() -> String {
-        return productName.label
+        return Helpers.getText(productName) ?? ""
     }
+    
+    func tapOnBackButton(){
+        Helpers.tapOnElement(backButton)
+        TestLogger.shared.log("\(name): \(LogMessages.TAPPED_BACK_BUTTON)")
+    }
+    
     
 }

@@ -31,6 +31,7 @@ class LoginScreen : BaseScreen {
     /// This function types the provided username into the `userNameTextField` UI element.
     func enterUserName(_ userName: String) {
         Helpers.enterText(userNameTextField, text: userName)
+        TestLogger.shared.log("\(AppConstants.LOGIN_SCREEN): \(LogMessages.USER_NAME_ENTERED)")
     }
     
     /// Enters the password into the password text field.
@@ -38,6 +39,7 @@ class LoginScreen : BaseScreen {
     /// This function types the provided password into the `passwordTextField` UI element.
     func enterPassword(_ password: String) {
         Helpers.enterText(passwordTextField, text: password)
+        TestLogger.shared.log("\(AppConstants.LOGIN_SCREEN): \(LogMessages.PASSWORD_ENTERED)")
     }
     
     /// Taps on the login button.
@@ -45,6 +47,7 @@ class LoginScreen : BaseScreen {
     /// This function performs a tap action on the `loginButton` UI element to submit the login form.
     func tapOnLogin() {
         Helpers.tapOnElement(loginButton)
+        TestLogger.shared.log("\(AppConstants.LOGIN_SCREEN): \(LogMessages.TAPPED_ON_LOGIN)")
     }
     
     //Failing the test case to as UI validation is not done on APP Level
@@ -60,6 +63,7 @@ class LoginScreen : BaseScreen {
     
     func tapOnAlertOkBtn(){
         Helpers.tapOnElement(alertOk)
+        TestLogger.shared.log("\(AppConstants.LOGIN_SCREEN): \(LogMessages.TAPPED_OK_BUTTON)")
     }
     
 }

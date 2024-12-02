@@ -25,12 +25,13 @@ final class LoginWithEmptyFieldsTests: BaseTest {
     }
     
     func testEmptyLogin(){
-        
+        TestLogger.shared.log("Test started: \(self.name)")
         homeScreen.tapOnMoreTab()
         moreScreen.tapOnLogin()
         loginScreen.tapOnLogin()
         loginScreen.assertEmptyUserName()
         loginScreen.tapOnAlertOkBtn()
+        TestLogger.shared.log("Test finished: \(self.name)")
         
     }
     

@@ -17,4 +17,14 @@ struct AppConstants{
     static let YOUR_EMAIL = "Your e-mail:"
     static let MENU_TEST_DATA = "MenuTestData"
     static let REPORT_BUG_TEST_DATA = "ReportBugTestData"
+    
+    static let SHIPPING_ADDRESS_SCREEN = "ShippingAdressScreen"
+    static let PRODUCT_DETAIL_SCREEN = "ProductDetailScreen"
+    static let PLACE_ORDER_SCREEN = "PlaceOrderScreen"
+    static let LOGIN_SCREEN = "LoginScreen"
+    static let CHCEK_OUT_SCREEN = "CheckOutScreen"
+    static let CHECK_OUT_COMPLETE_SCREEN = "CheckoutCompleteScreen"
+    static let CART_SCREEN = "CartScreen"
+    static let BASE_SCREEN = "BaseScreen"
+    static let MORE_SCREEN = "MoreScreen"
 }

@@ -39,6 +39,7 @@ class CartScreen : BaseScreen{
     /// This function triggers a tap action on the `proceedToCheckOutBtn` UI element.
     func tapOnProceedToCheckOutButton() {
         Helpers.tapOnElement(proceedToCheckOutButton)
+        TestLogger.shared.log("\(AppConstants.CART_SCREEN): \(LogMessages.TAPPED_PROCEED_TO_CHECKOUT)")
     }
     
     /// Taps on the "Remove from Cart" button.
