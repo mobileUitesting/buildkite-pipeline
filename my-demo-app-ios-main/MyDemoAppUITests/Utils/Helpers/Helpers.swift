@@ -65,6 +65,21 @@ class Helpers {
             return nil
         }
     }
+    
+    static func tapOnFirstMatch(in app: XCUIApplication, matching elementType: XCUIElement.ElementType, label: String? = nil) {
+            // Find the matching elements by element type
+            let matchingElements = app.descendants(matching: elementType).allElementsBoundByIndex
+            
+            // If a label is provided, filter by label
+            let filteredElements = label != nil ? matchingElements.filter { $0.label == label } : matchingElements
+            
+            // Check if a match was found and tap on the first hittable element
+            if let firstMatch = filteredElements.first, firstMatch.exists && firstMatch.isHittable {
+                firstMatch.tap()
+            } else {
+                XCTFail("Failed to tap on the \(elementType) element with label '\(label ?? "")': No hittable element found.")
+            }
+        }
 }
 
 struct ElementIdentifiers {

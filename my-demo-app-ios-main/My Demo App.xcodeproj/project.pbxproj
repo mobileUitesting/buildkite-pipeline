@@ -10,6 +10,11 @@
 		253553C42CFD767B00509C51 /* ProductDetailsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253553C32CFD767B00509C51 /* ProductDetailsTests.swift */; };
 		253554B72CFDC0DB00509C51 /* TestLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253554B52CFDC0DB00509C51 /* TestLogger.swift */; };
 		253554B92CFDC1E200509C51 /* LogMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253554B82CFDC1E200509C51 /* LogMessages.swift */; };
+		255B76BD2CFEE60000DFCC58 /* AddRemoveItemsFromCartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255B76B92CFEE60000DFCC58 /* AddRemoveItemsFromCartTests.swift */; };
+		255B76BE2CFEE60000DFCC58 /* LogoutVerificationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255B76BB2CFEE60000DFCC58 /* LogoutVerificationTests.swift */; };
+		255B76C12CFEE75400DFCC58 /* Staging.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 255B76C02CFEE75400DFCC58 /* Staging.xcconfig */; };
+		255B76C22CFEE75400DFCC58 /* Production.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 255B76BF2CFEE75400DFCC58 /* Production.xcconfig */; };
+		255B76C42CFF02C500DFCC58 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255B76C32CFF02C500DFCC58 /* SessionManager.swift */; };
 		25BE8B102CF86D1F00161180 /* BaseScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BE8B0D2CF86D1F00161180 /* BaseScreen.swift */; };
 		25BE8B112CF86D1F00161180 /* BaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BE8B0E2CF86D1F00161180 /* BaseTest.swift */; };
 		25BE8B172CF86D6300161180 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BE8B122CF86D6300161180 /* AppConstants.swift */; };
@@ -99,6 +104,11 @@
 		253553C32CFD767B00509C51 /* ProductDetailsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsTests.swift; sourceTree = "<group>"; };
 		253554B52CFDC0DB00509C51 /* TestLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLogger.swift; sourceTree = "<group>"; };
 		253554B82CFDC1E200509C51 /* LogMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogMessages.swift; sourceTree = "<group>"; };
+		255B76B92CFEE60000DFCC58 /* AddRemoveItemsFromCartTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRemoveItemsFromCartTests.swift; sourceTree = "<group>"; };
+		255B76BB2CFEE60000DFCC58 /* LogoutVerificationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutVerificationTests.swift; sourceTree = "<group>"; };
+		255B76BF2CFEE75400DFCC58 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
+		255B76C02CFEE75400DFCC58 /* Staging.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Staging.xcconfig; sourceTree = "<group>"; };
+		255B76C32CFF02C500DFCC58 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		25BE8B0D2CF86D1F00161180 /* BaseScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseScreen.swift; sourceTree = "<group>"; };
 		25BE8B0E2CF86D1F00161180 /* BaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTest.swift; sourceTree = "<group>"; };
 		25BE8B122CF86D6300161180 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
@@ -227,6 +237,22 @@
 			path = Logger;
 			sourceTree = "<group>";
 		};
+		255B76BA2CFEE60000DFCC58 /* AddRemoveItems */ = {
+			isa = PBXGroup;
+			children = (
+				255B76B92CFEE60000DFCC58 /* AddRemoveItemsFromCartTests.swift */,
+			);
+			path = AddRemoveItems;
+			sourceTree = "<group>";
+		};
+		255B76BC2CFEE60000DFCC58 /* LogoutVerification */ = {
+			isa = PBXGroup;
+			children = (
+				255B76BB2CFEE60000DFCC58 /* LogoutVerificationTests.swift */,
+			);
+			path = LogoutVerification;
+			sourceTree = "<group>";
+		};
 		25BE8B0F2CF86D1F00161180 /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -279,6 +305,8 @@
 				2999D74F2CF991EA00E6B194 /* Sorting */,
 				291BC1DE2CF88CDD00B0F974 /* Login */,
 				291BC1DD2CF88CB100B0F974 /* LoginAndItemPurchase */,
+				255B76BA2CFEE60000DFCC58 /* AddRemoveItems */,
+				255B76BC2CFEE60000DFCC58 /* LogoutVerification */,
 			);
 			path = E2ETests;
 			sourceTree = "<group>";
@@ -297,6 +325,8 @@
 			isa = PBXGroup;
 			children = (
 				25BE8B5D2CF86DA300161180 /* Helpers.swift */,
+				255B76BF2CFEE75400DFCC58 /* Production.xcconfig */,
+				255B76C02CFEE75400DFCC58 /* Staging.xcconfig */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -559,6 +589,7 @@
 				25BE8B4C2CF86D9900161180 /* E2ETests */,
 				25BE8B5E2CF86DA300161180 /* Utils */,
 				A2C826AC2706266600616582 /* Info.plist */,
+				255B76C32CFF02C500DFCC58 /* SessionManager.swift */,
 			);
 			path = MyDemoAppUITests;
 			sourceTree = "<group>";
@@ -675,6 +706,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				25BE8B722CF8842300161180 /* CardDetails.json in Resources */,
+				255B76C12CFEE75400DFCC58 /* Staging.xcconfig in Resources */,
+				255B76C22CFEE75400DFCC58 /* Production.xcconfig in Resources */,
 				25BE8B742CF8842D00161180 /* Address.json in Resources */,
 				25BE8B402CF86D8D00161180 /* Login.json in Resources */,
 			);
@@ -814,6 +847,7 @@
 				253554B72CFDC0DB00509C51 /* TestLogger.swift in Sources */,
 				25BE8B2C2CF86D8100161180 /* MoreScreen.swift in Sources */,
 				2999D7512CF9923F00E6B194 /* VerifySortingTests.swift in Sources */,
+				255B76C42CFF02C500DFCC58 /* SessionManager.swift in Sources */,
 				25BE8B672CF871B200161180 /* UserCredentialsTestDataModel.swift in Sources */,
 				25BE8B612CF86DA300161180 /* Helpers.swift in Sources */,
 				25BE8B2D2CF86D8100161180 /* LoginScreen.swift in Sources */,
@@ -828,6 +862,8 @@
 				25BE8B382CF86D8100161180 /* CartScreen.swift in Sources */,
 				25BE8B112CF86D1F00161180 /* BaseTest.swift in Sources */,
 				25BE8B172CF86D6300161180 /* AppConstants.swift in Sources */,
+				255B76BD2CFEE60000DFCC58 /* AddRemoveItemsFromCartTests.swift in Sources */,
+				255B76BE2CFEE60000DFCC58 /* LogoutVerificationTests.swift in Sources */,
 				253553C42CFD767B00509C51 /* ProductDetailsTests.swift in Sources */,
 				25BE8B192CF86D6300161180 /* ErrorMessages.swift in Sources */,
 				253554B92CFDC1E200509C51 /* LogMessages.swift in Sources */,

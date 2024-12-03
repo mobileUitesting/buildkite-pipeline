@@ -65,5 +65,8 @@ class LoginScreen : BaseScreen {
         Helpers.tapOnElement(alertOk)
         TestLogger.shared.log("\(AppConstants.LOGIN_SCREEN): \(LogMessages.TAPPED_OK_BUTTON)")
     }
+    func checkForLoginButton() -> Bool {
+            return Helpers.isUIElementVisible(loginButton)
+        }
     
 }
