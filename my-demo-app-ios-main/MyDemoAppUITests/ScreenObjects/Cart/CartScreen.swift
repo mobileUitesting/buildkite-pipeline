@@ -34,6 +34,7 @@ class CartScreen : BaseScreen{
         Helpers.tapOnElement(decreaseButton)
     }
     
+    
     /// Taps on the "Proceed to Checkout" button.
     ///
     /// This function triggers a tap action on the `proceedToCheckOutBtn` UI element.
@@ -46,7 +47,7 @@ class CartScreen : BaseScreen{
     ///
     /// This function triggers a tap action on the `removeFromCartBtn` UI element.
     func tapOnRemoveFromCartButton() {
-        Helpers.tapOnElement(removeFromCartButton)
+        Helpers.tapOnFirstMatch(in: app, matching: .button, label: ElementIdentifiers.REMOVE_FROM_CART)
     }
     
     /// Gets the current product count.

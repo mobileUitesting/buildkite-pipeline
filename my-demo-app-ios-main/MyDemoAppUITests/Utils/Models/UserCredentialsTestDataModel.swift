@@ -8,6 +8,8 @@
 import Foundation
 
 struct UserCredentialsTestDataModel : Codable{
+    let staging: CredentsialDataModel
+    let production: CredentsialDataModel
     let validCredentials : CredentsialDataModel
     let invalidCredentials : CredentsialDataModel
 }

@@ -13,17 +13,16 @@ class BaseTest: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        app = XCUIApplication()
-        app.launch()
+        app = SessionManager().app
+        SessionManager().startSession()
     }
     
     override func tearDown() {
-        app.terminate()
-        super.tearDown()
+        SessionManager().endSession()
+         super.tearDown()
         TestLogger.shared.saveLogToFile()
         if let logFileURL = TestLogger.shared.getLogFileURL() {
             print("Log file URL: \(logFileURL.path)")
         }
-        
     }
 }

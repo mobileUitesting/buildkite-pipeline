@@ -27,4 +27,9 @@ struct AppConstants{
     static let CART_SCREEN = "CartScreen"
     static let BASE_SCREEN = "BaseScreen"
     static let MORE_SCREEN = "MoreScreen"
+    
+    static let DEMO_ENVIRONMENT = "DEMO_ENVIRONMENT"
+        static let STAGING = "Stagging"
+        static let PRODUCTION = "Production"
+    
 }
