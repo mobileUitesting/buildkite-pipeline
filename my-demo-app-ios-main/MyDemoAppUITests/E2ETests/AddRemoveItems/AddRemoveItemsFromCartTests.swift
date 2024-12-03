@@ -23,7 +23,6 @@ final class AddRemoveItemsFromCartTests: BaseTest {
         super.setUp()
         loadScreens()
         loadTestData()
-        loadCredentialsForEnvironment()
     }
     
     /// This method loads required screeens for the tests

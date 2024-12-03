@@ -43,8 +43,13 @@ class TestLogger {
         
         do {
             // If the file exists, overwrite it
-            try logContent.write(to: logFileURL, atomically: true, encoding: .utf8)
-            print("Log saved to file: \(logFileURL.path)")
+            let isLoggerEnabled = ProcessInfo.processInfo.environment[AppConstants.ENABLE_LOGGER] ?? ""
+           if isLoggerEnabled == "YES"{
+                try logContent.write(to: logFileURL, atomically: true, encoding: .utf8)
+                print("Log saved to file: \(logFileURL.path)")
+            } else{
+                print("Logger disabled")
+            }
         } catch {
             print("Failed to save log file: \(error)")
         }
