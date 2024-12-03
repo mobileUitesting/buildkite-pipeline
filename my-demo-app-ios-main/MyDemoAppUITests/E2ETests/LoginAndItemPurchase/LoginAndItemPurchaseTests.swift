@@ -29,6 +29,9 @@ class LoginAndItemPurchaseTests: BaseTest {
         super.setUp()
         loadScreens()
         loadTestData()
+        
+        TestLogger.shared.clearLog()
+        TestLogger.shared.log("Test started: \(self.name)")
     }
     
     /// This method loads all the required screens for the tests
@@ -62,7 +65,9 @@ class LoginAndItemPurchaseTests: BaseTest {
     func testLoginAndItemPurchase(){
         /// Login
         homeScreen.tapOnMoreTab()
+       
         moreScreen.tapOnLogin()
+        
         loginScreen.login(userName: userCredentialsTestData.validCredentials.userName ?? "", password: userCredentialsTestData.validCredentials.password ?? "")
         
         homeScreen.tapOnMoreTab()
@@ -70,10 +75,10 @@ class LoginAndItemPurchaseTests: BaseTest {
         VerificationManager.verifyBool(for: moreScreen.checkForLogOut())
         
         homeScreen.tapOnCatalogTab()
-        
         // add product to cart
         let (procutName,productCost) = homeScreen.getItemDetails(at: firstItemIndex)
         homeScreen.addToCart(index: firstItemIndex)
+       
         let productCostInCart = cartScreen.getProductPriceInString()
         let productNameInCart = cartScreen.getProductNameString()
         
@@ -92,5 +97,9 @@ class LoginAndItemPurchaseTests: BaseTest {
         /// verifying for checkout successful message
         VerificationManager.verifyBool(for: checkoutCompleteScreen.checkForContinueShoppingButton())
         checkoutCompleteScreen.tapOnCotinueShoppingButton()
+        
+        TestLogger.shared.log("Test finished: \(self.name)")
     }
+    
+    
 }

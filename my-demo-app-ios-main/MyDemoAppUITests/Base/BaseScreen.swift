@@ -22,13 +22,16 @@ class BaseScreen {
     
     
     func tapOnMoreTab(){
+        TestLogger.shared.log("\(AppConstants.BASE_SCREEN): \(LogMessages.CLICKED_ON_MORE)")
         Helpers.tapOnElement(moreTab)
     }
     
     func tapOnCartTab(){
+        TestLogger.shared.log("\(AppConstants.BASE_SCREEN): \(LogMessages.CLICKED_ON_CART)")
         Helpers.tapOnElement(cartTab)
     }
     func tapOnCatalogTab(){
+        TestLogger.shared.log("\(AppConstants.BASE_SCREEN): \(LogMessages.CLICKED_ON_CATALOG)")
         Helpers.tapOnElement(catalogTab)
     }
     

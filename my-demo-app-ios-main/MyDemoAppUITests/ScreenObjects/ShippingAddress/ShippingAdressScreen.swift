@@ -24,12 +24,15 @@ class ShippingAdressScreen : BaseScreen{
     private lazy var cityErrorMessage = app.staticTexts[ErrorMessages.VALIDATION_MESSAGE_FOR_CITY]
     private lazy var zipCodeErrorMessage = app.staticTexts[ErrorMessages.VALIDATION_MESSAGE_FOR_ZIP_CODE]
     private lazy var countryErrorMessage = app.staticTexts[ErrorMessages.VALIDATION_MESSAGE_FOR_COUNTRY]
-    
+    let name = AppConstants.SHIPPING_ADDRESS_SCREEN
+   
     /// Enters the full name into the full name text field.
     ///
     /// This function types the provided full name into the `fullNameTextField` UI element.
+   
     func enterFullName(_ fullName: String) {
         Helpers.enterText(fullNameTextField, text: fullName)
+        TestLogger.shared.log("\(self.name): \(LogMessages.FULL_NAME_ENTERED)")
     }
     
     /// Enters the address (line 1) into the address text field.
@@ -37,6 +40,7 @@ class ShippingAdressScreen : BaseScreen{
     /// This function types the provided address into the `addressOneTextField` UI element.
     func enterAddressOne(_ address: String) {
         Helpers.enterText(addressOneTextField, text: address)
+        TestLogger.shared.log("\(self.name): \(LogMessages.ADDRESS_ONE_ENTERED)")
     }
     
     /// Enters the city into the city text field.
@@ -44,6 +48,7 @@ class ShippingAdressScreen : BaseScreen{
     /// This function types the provided city into the `cityTextField` UI element.
     func enterCity(_ city: String) {
         Helpers.enterText(cityTextField, text: city)
+        TestLogger.shared.log("\(self.name): \(LogMessages.CITY_NAME_ENTERED)")
     }
     
     /// Enters the state into the state text field.
@@ -51,6 +56,7 @@ class ShippingAdressScreen : BaseScreen{
     /// This function types the provided state into the `stateTextField` UI element.
     func enterState(_ state: String) {
         Helpers.enterText(stateTextField, text: state)
+        TestLogger.shared.log("\(self.name): \(LogMessages.STATE_NAME_ENTERED)")
     }
     
     /// Enters the zip code into the zip code text field.
@@ -58,6 +64,7 @@ class ShippingAdressScreen : BaseScreen{
     /// This function types the provided zip code into the `zipCodeTextField` UI element.
     func enterZipCode(_ zipCode: String) {
         Helpers.enterText(zipCodeTextField, text: zipCode)
+        TestLogger.shared.log("\(self.name): \(LogMessages.ZIP_CODE_ENTERED)")
     }
     
     /// Enters the country into the country text field.
@@ -65,6 +72,7 @@ class ShippingAdressScreen : BaseScreen{
     /// This function types the provided country into the `countryTextField` UI element.
     func enterCountry(_ country: String) {
         Helpers.enterText(countryTextField, text: country)
+        TestLogger.shared.log("\(self.name): \(LogMessages.COUNTRY_NAME_ENTERED)")
     }
     
     /// Taps on the payment button.
@@ -72,6 +80,7 @@ class ShippingAdressScreen : BaseScreen{
     /// This function triggers a tap action on the `toPaymentButton` UI element to proceed with payment.
     func tapOnPaymentButton() {
         Helpers.tapOnElement(toPaymentButton)
+        TestLogger.shared.log("\(self.name): \(LogMessages.TAPPED_PAYMENT_BUTTON)")
     }
     
     /// Taps on the OK button.
@@ -79,6 +88,7 @@ class ShippingAdressScreen : BaseScreen{
     /// This function triggers a tap action on the `okButton` UI element to dismiss any pop-ups or alerts.
     func tapOnOkButton() {
         Helpers.tapOnElement(okButton)
+        TestLogger.shared.log("\(self.name): \(LogMessages.TAPPED_OK_BUTTON)")
     }
     
     /// Checks for an error message in the full name text field.

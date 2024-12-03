@@ -11,6 +11,7 @@ class CheckoutCompleteScreen: BaseScreen {
 
     private lazy var continueShoppingButton = app.buttons[ElementIdentifiers.CONTINUE_SHOPPING]
     
+    
     /// Checks if the "Continue Shopping" button is visible.
     ///
     /// This function returns `true` if the `continueShoppingButton` UI element is visible on the screen.
@@ -23,5 +24,6 @@ class CheckoutCompleteScreen: BaseScreen {
     /// This function triggers a tap action on the `continueShoppingButton` UI element.
     func tapOnCotinueShoppingButton() {
         Helpers.tapOnElement(continueShoppingButton)
+        TestLogger.shared.log("\(AppConstants.CHECK_OUT_COMPLETE_SCREEN): \(LogMessages.TAPPED_CONTINUE_SHOPPING)")
     }
 }

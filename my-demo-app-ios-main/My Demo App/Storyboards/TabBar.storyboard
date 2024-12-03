@@ -745,6 +745,7 @@
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sauce Labs Backpack" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kFc-el-fGo">
                                                                 <rect key="frame" x="16" y="24" width="231.5" height="24"/>
+                                                                <accessibility key="accessibilityConfiguration" identifier="productName"/>
                                                                 <fontDescription key="fontDescription" name="ProximaNova-Medium" family="Proxima Nova" pointSize="24"/>
                                                                 <nil key="textColor"/>
                                                             </label>
@@ -1780,13 +1781,13 @@ Fits in comfortably a laptop up to 15 inch. Never leave a thing behind and forge
                             <rect key="frame" x="8" y="314" width="304" height="220"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sort by:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bl6-xq-xlK">
-                                    <rect key="frame" x="20" y="10" width="54" height="16"/>
+                                    <rect key="frame" x="20" y="10" width="56.5" height="19"/>
                                     <fontDescription key="fontDescription" name="ProximaNova-Medium" family="Proxima Nova" pointSize="16"/>
                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="dyw-AP-sq8">
-                                    <rect key="frame" x="0.0" y="41" width="304" height="153"/>
+                                    <rect key="frame" x="0.0" y="44" width="304" height="153"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Srz-NK-a9W">
                                             <rect key="frame" x="0.0" y="0.0" width="304" height="36"/>

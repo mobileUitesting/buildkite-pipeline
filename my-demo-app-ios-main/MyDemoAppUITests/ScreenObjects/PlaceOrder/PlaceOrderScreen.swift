@@ -19,13 +19,13 @@ class PlaceOrderScreen : BaseScreen {
     private lazy var city = app.staticTexts[userAddressTestData.city ?? ""]
     private lazy var country = app.staticTexts[userAddressTestData.country ?? ""]
     private lazy var placeOrderButton = app.staticTexts[ElementIdentifiers.PLACE_ORDER_BUTTON]
-   
     
     /// Taps on the "Place Order" button.
     ///
     /// This function triggers a tap action on the `placeOrderButton` UI element.
     func tapOnPlaceOrder() {
         Helpers.tapOnElement(placeOrderButton)
+        TestLogger.shared.log("\(AppConstants.PLACE_ORDER_SCREEN): \(LogMessages.TAPPED_PLACE_ORDER_BUTTON)")
     }
     
    
