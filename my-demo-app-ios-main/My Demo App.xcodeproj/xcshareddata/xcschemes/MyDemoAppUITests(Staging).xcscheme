@@ -38,8 +38,13 @@
       allowLocationSimulation = "YES">
       <EnvironmentVariables>
          <EnvironmentVariable
-            key = "DEMO_ENVIRONMENT"
-            value = "Stagging"
+            key = "ENABLE_LOGGER"
+            value = "NO"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "ENABLE_LOG"
+            value = "NO"
             isEnabled = "YES">
          </EnvironmentVariable>
       </EnvironmentVariables>
