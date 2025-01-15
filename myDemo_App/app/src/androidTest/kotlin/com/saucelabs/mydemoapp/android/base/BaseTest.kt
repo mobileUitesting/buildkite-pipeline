@@ -8,7 +8,7 @@ import androidx.test.ext.junit.rules.ActivityScenarioRule
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.uiautomator.UiDevice
-import com.saucelabs.mydemoapp.android.utils.Logger
+//import com.saucelabs.mydemoapp.android.utils.Logger
 import com.saucelabs.mydemoapp.android.sessionmanager.SessionManager
 import io.qameta.allure.android.rules.LogcatRule
 import io.qameta.allure.android.rules.ScreenshotRule
@@ -34,7 +34,7 @@ open class BaseTest<T : Activity>(activityClass: Class<T>){
     open fun setUp() {
          disableAnimations()
       //  IdlingRegistry.getInstance().register(mIdlingResource)
-       Logger.initialize()
+       //Logger.initialize()
         Intents.init()
          context = InstrumentationRegistry.getInstrumentation().context
          sessionManager = SessionManager(context)

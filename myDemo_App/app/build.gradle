@@ -11,7 +11,7 @@ plugins {
 android {
     signingConfigs {}
 
-    compileSdkVersion 34
+    compileSdkVersion 35
     useLibrary 'org.apache.http.legacy'
     ndkVersion '21.3.6528147'
     namespace 'com.saucelabs.mydemoapp.android'
@@ -26,7 +26,7 @@ android {
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
         testInstrumentationRunnerArguments = [
                 clearPackageData: 'true',
-                listener: 'com.saucelabs.mydemoapp.android.MyTestCollector'
+           //     listener: 'com.saucelabs.mydemoapp.android.MyTestCollector'
         ]
 
         buildConfigField "String", "SAUCE_USERNAME", "\"${System.getenv('SAUCE_USERNAME')}\""
@@ -46,6 +46,9 @@ android {
         exclude 'META-INF/LICENSE.md'
         exclude 'META-INF/LICENSE'
         exclude 'META-INF/LICENSE-notice.md'
+        exclude 'META-INF/NOTICE.md'
+        exclude 'META-INF/NOTICE.txt'
+
     }
     buildTypes {
         debug {
@@ -94,10 +97,11 @@ repositories {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.databinding:databinding-compiler:8.8.0'
 
     // Test Runner and Junit dependencies
-    androidTestImplementation 'androidx.test:runner:1.6.1'
-    androidTestImplementation 'androidx.test:rules:1.6.1'
+    androidTestImplementation 'androidx.test:runner:1.4.0'
+    androidTestImplementation 'androidx.test:rules:1.4.0'
    // testImplementation 'junit:junit:4.13.2'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.3'
     testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.10.3'
@@ -161,7 +165,7 @@ dependencies {
     implementation 'com.android.support.test.espresso:espresso-idling-resource:3.0.2'
 
     //Kotlin dependencies
-    implementation 'androidx.core:core-ktx:1.13.1'
+    implementation 'androidx.core:core-ktx:1.15.0'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.7'
     testImplementation "org.jetbrains.kotlin:kotlin-test:2.0.0" // Match your Kotlin version
     androidTestImplementation "org.jetbrains.kotlin:kotlin-test:2.0.0"
@@ -182,3 +186,4 @@ dependencies {
 apply plugin: 'com.google.gms.google-services'
 apply plugin: 'org.jetbrains.kotlin.android'
 apply plugin: 'org.jetbrains.dokka'
+
