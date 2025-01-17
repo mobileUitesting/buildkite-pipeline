@@ -10,7 +10,6 @@ import com.saucelabs.mydemoapp.android.data.DataBinder
 import com.saucelabs.mydemoapp.android.utils.annotations.Regression
 import com.saucelabs.mydemoapp.android.view.activities.SplashActivity
 import io.qameta.allure.kotlin.junit4.Tag
-import io.qameta.allure.kotlin.junit4.Tags
 import org.junit.Test
 import kotlin.test.fail
 

@@ -1,13 +1,17 @@
 package com.saucelabs.mydemoapp.android.pageObjects.Helper
 
 
+import android.util.Log
+import com.saucelabs.mydemoapp.android.Config.TAG
 import com.saucelabs.mydemoapp.android.base.BaseTest
 import com.saucelabs.mydemoapp.android.data.model.UserCredentials
 import com.saucelabs.mydemoapp.android.data.DataBinder
 import com.saucelabs.mydemoapp.android.utils.annotations.Regression
 import com.saucelabs.mydemoapp.android.view.activities.SplashActivity
 import io.qameta.allure.kotlin.junit4.Tag
+import org.junit.After
 import org.junit.Assert.fail
+import org.junit.Before
 import kotlin.test.Test
 
 open class LogoutActivityTest : BaseTest<SplashActivity>(SplashActivity::class.java) {

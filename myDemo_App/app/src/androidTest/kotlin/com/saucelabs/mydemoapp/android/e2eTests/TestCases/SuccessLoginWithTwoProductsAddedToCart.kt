@@ -1,7 +1,6 @@
 package com.saucelabs.mydemoapp.android.e2eTests.TestCases
 
-import android.util.Log
-import com.saucelabs.mydemoapp.android.Config.TAG
+
 import com.saucelabs.mydemoapp.android.base.BaseTest
 import com.saucelabs.mydemoapp.android.data.DataBinder
 import com.saucelabs.mydemoapp.android.data.model.CardPaymentDetails
