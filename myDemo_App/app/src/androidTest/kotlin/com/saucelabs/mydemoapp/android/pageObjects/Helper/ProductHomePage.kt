@@ -19,7 +19,7 @@ class ProductHomePage {
     private val cartView : ViewInteraction = onView(ViewMatchers.withId(R.id.cartRL))
     private val assertAction : ViewInteraction= onView(ViewMatchers.withText("Sauce Labs BackPack"))
 
-     fun clickOnProductPosition() {
+    fun clickOnProductPosition() {
         onView(withId(R.id.productRV))
             .perform(
                 RecyclerViewActions.actionOnItemAtPosition<RecyclerView.ViewHolder>(
@@ -27,7 +27,7 @@ class ProductHomePage {
                     click()))
     }
 }
-    fun clickOnProductByText(text: String) {
+fun clickOnProductByText(text: String) {
     onView(withId(R.id.productRV))
         .perform(
             RecyclerViewActions.actionOnItem<RecyclerView.ViewHolder>(

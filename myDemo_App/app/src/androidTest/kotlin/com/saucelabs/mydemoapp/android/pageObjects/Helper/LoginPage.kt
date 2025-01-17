@@ -26,7 +26,7 @@ class LoginPage {
     private val lockedUserEmail: ViewInteraction = onView(ViewMatchers.withId(R.id.nameET))
     private val lockedUserPassword: ViewInteraction = onView(ViewMatchers.withId(R.id.passwordET))
 
-    private fun menuClick() {
+    fun menuClick() {
         menuIcon.perform(click())
     }
 

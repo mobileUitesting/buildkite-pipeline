@@ -1,9 +1,11 @@
-package com.saucelabs.mydemoapp.android.e2eTests.productPurchase
-
+package com.saucelabs.mydemoapp.android.e2eTests.TestCases
 
 import android.util.Log
 import com.saucelabs.mydemoapp.android.Config.TAG
 import com.saucelabs.mydemoapp.android.base.BaseTest
+import com.saucelabs.mydemoapp.android.data.DataBinder
+import com.saucelabs.mydemoapp.android.data.model.CardPaymentDetails
+import com.saucelabs.mydemoapp.android.data.model.ShippingDetails
 import com.saucelabs.mydemoapp.android.data.model.UserCredentials
 import com.saucelabs.mydemoapp.android.pageObjects.Helper.CheckOutDetailsPage
 import com.saucelabs.mydemoapp.android.pageObjects.Helper.LoginPage
@@ -12,17 +14,11 @@ import com.saucelabs.mydemoapp.android.pageObjects.Helper.PlaceOrderPage
 import com.saucelabs.mydemoapp.android.pageObjects.Helper.ProductCartPage
 import com.saucelabs.mydemoapp.android.pageObjects.Helper.ProductDetailsPage
 import com.saucelabs.mydemoapp.android.pageObjects.Helper.ProductHomePage
-import com.saucelabs.mydemoapp.android.data.DataBinder
-import com.saucelabs.mydemoapp.android.data.model.CardPaymentDetails
-import com.saucelabs.mydemoapp.android.data.model.ShippingDetails
-import com.saucelabs.mydemoapp.android.utils.annotations.Regression
 import com.saucelabs.mydemoapp.android.view.activities.SplashActivity
-import io.qameta.allure.kotlin.junit4.Tag
-import org.junit.After
-import org.junit.Before
 import org.junit.Test
 
-class ProductOrderTest : BaseTest<SplashActivity>(SplashActivity::class.java) {
+class SuccessLoginWithTwoProductsAddedToCart: BaseTest<SplashActivity>(SplashActivity::class.java) {
+
 
     private val userCredentials: UserCredentials = DataBinder().getUserCredentials()
     private val shippingDetails: ShippingDetails = DataBinder().getShippingDetails()
@@ -36,15 +32,15 @@ class ProductOrderTest : BaseTest<SplashActivity>(SplashActivity::class.java) {
     private val paymentDetailsPage = PaymentDetailsPage()
     private val placeOrderPage = PlaceOrderPage()
 
-    @Regression
-    @Tag("regression")
+
     @Test
-    fun purchaseProductOrder()
+    fun loginSuccessWithTwoProductsOrder()
     {
         loginPage.login(userCredentials)
         proudctHomePage.clickOnProductPosition()
         productdetailsPage.productColorClick(position = 0)
         productdetailsPage.productCartSelect()
+        productdetailsPage.addItemClick()
         productdetailsPage.cartClick()
         productCartPage.productOnCheckOut()
         checkOutDetailsPage.userShippingDetails(shippingDetails)
@@ -56,3 +52,4 @@ class ProductOrderTest : BaseTest<SplashActivity>(SplashActivity::class.java) {
     }
 
 }
+

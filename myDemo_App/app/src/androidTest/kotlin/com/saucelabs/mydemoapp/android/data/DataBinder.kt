@@ -5,10 +5,7 @@ import com.saucelabs.mydemoapp.android.data.model.CardPaymentDetails
 import com.saucelabs.mydemoapp.android.data.model.ShippingDetails
 import com.saucelabs.mydemoapp.android.data.model.UserCredentials
 import com.saucelabs.mydemoapp.android.utils.JsonParser
-import kotlinx.serialization.decodeFromString
-import kotlinx.serialization.json.Json
-import java.io.InputStream
-import java.io.InputStreamReader
+
 
 class DataBinder {
 

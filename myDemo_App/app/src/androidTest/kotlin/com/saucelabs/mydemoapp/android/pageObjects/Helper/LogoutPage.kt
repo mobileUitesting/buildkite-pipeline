@@ -27,15 +27,15 @@ class LogoutPage {
         confirmLogout.perform(click())
     }
 
-private fun assertLoggedOut() {
-    try {
-        loginView.check(matches(ViewMatchers.isDisplayed()))
+    private fun assertLoggedOut() {
+        try {
+            loginView.check(matches(ViewMatchers.isDisplayed()))
 
-        println("Assertion Passed: Log In screen is displayed after logout.")
-    } catch (e: AssertionError) {
+            println("Assertion Passed: Log In screen is displayed after logout.")
+        } catch (e: AssertionError) {
 
-        println("Assertion Failed: Log In screen is not displayed after logout.")
-        throw e
+            println("Assertion Failed: Log In screen is not displayed after logout.")
+            throw e
+        }
     }
-}
 }
