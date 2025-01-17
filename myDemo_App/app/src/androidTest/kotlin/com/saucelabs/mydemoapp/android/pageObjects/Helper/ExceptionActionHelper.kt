@@ -2,7 +2,6 @@ package com.saucelabs.mydemoapp.android.pageObjects.Helper
 
 
 import android.util.Log
-import androidx.test.espresso.EspressoException
 import androidx.test.espresso.NoMatchingViewException
 import androidx.test.espresso.PerformException
 import androidx.test.espresso.ViewAction

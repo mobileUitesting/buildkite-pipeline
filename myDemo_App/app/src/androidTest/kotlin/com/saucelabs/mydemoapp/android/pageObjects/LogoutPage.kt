@@ -1,4 +1,4 @@
-package com.saucelabs.mydemoapp.android.pageObjects.Helper
+package com.saucelabs.mydemoapp.android.pageObjects
 
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.ViewInteraction

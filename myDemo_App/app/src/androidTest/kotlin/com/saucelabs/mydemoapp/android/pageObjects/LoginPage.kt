@@ -1,4 +1,4 @@
-package com.saucelabs.mydemoapp.android.pageObjects.Helper
+package com.saucelabs.mydemoapp.android.pageObjects
 
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.ViewInteraction
@@ -8,6 +8,7 @@ import androidx.test.espresso.action.ViewActions.typeText
 import androidx.test.espresso.matcher.ViewMatchers
 import com.saucelabs.mydemoapp.android.R
 import com.saucelabs.mydemoapp.android.data.model.UserCredentials
+import com.saucelabs.mydemoapp.android.pageObjects.Helper.ViewActionsHelper
 
 
 class LoginPage {

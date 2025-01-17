@@ -1,4 +1,4 @@
-package com.saucelabs.mydemoapp.android.pageObjects.Helper
+package com.saucelabs.mydemoapp.android.pageObjects
 
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.ViewInteraction
@@ -7,7 +7,7 @@ import androidx.test.espresso.action.ViewActions.closeSoftKeyboard
 import androidx.test.espresso.action.ViewActions.typeText
 import androidx.test.espresso.matcher.ViewMatchers
 import com.saucelabs.mydemoapp.android.R
-import com.saucelabs.mydemoapp.android.data.model.ShippingDetails
+
 
 class CheckOutDetailsPage {
 
@@ -19,6 +19,7 @@ class CheckOutDetailsPage {
     private val zipSel: ViewInteraction = onView(ViewMatchers.withId(R.id.zipET))
     private val countrySel:ViewInteraction = onView(ViewMatchers.withId(R.id.countryET))
     private val paymentButton : ViewInteraction = onView(ViewMatchers.withId(R.id.paymentBtn))
+
 
     fun userShippingDetails(shippingDetails : ShippingDetails)
     {
