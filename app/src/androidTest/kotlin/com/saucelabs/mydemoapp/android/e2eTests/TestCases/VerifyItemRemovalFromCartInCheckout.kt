@@ -1,7 +1,6 @@
 package com.saucelabs.mydemoapp.android.e2eTests.TestCases
 
-import android.util.Log
-import com.saucelabs.mydemoapp.android.Config.TAG
+
 import com.saucelabs.mydemoapp.android.base.BaseTest
 import com.saucelabs.mydemoapp.android.data.DataBinder
 import com.saucelabs.mydemoapp.android.data.model.UserCredentials
@@ -10,7 +9,6 @@ import com.saucelabs.mydemoapp.android.pageObjects.Helper.ProductCartPage
 import com.saucelabs.mydemoapp.android.pageObjects.Helper.ProductDetailsPage
 import com.saucelabs.mydemoapp.android.pageObjects.Helper.ProductHomePage
 import com.saucelabs.mydemoapp.android.view.activities.SplashActivity
-import org.junit.Before
 import org.junit.Test
 
 class VerifyItemRemovalFromCartInCheckout : BaseTest<SplashActivity>(SplashActivity::class.java) {
@@ -23,10 +21,6 @@ class VerifyItemRemovalFromCartInCheckout : BaseTest<SplashActivity>(SplashActiv
     private val productCartPage = ProductCartPage()
 
 
-    @Before
-    override fun setUp() {
-        Log.d(TAG, "Setting up test environment for product purchase")
-    }
 
     @Test
     fun purchaseProductOrder() {
