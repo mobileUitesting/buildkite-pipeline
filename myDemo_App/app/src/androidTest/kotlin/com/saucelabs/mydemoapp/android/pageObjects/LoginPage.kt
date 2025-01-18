@@ -17,7 +17,7 @@ import com.saucelabs.mydemoapp.android.util.Logger
 class LoginPage {
 
     private val viewActionsHelper = ViewActionsHelper()
-    private val sideMenu=SideMenuPage()
+    private val sideMenu = SideMenuPage()
 
 
     private val userEmail: ViewInteraction = onView(ViewMatchers.withId(R.id.nameET))
@@ -25,7 +25,7 @@ class LoginPage {
     private val loginButton: ViewInteraction = onView(ViewMatchers.withId(R.id.loginBtn))
 
 
-      private fun userLogin(userCredentials : UserCredentials ) {
+    private fun userLogin(userCredentials: UserCredentials) {
 
 
         userEmail.perform(typeText(userCredentials.userEmail), closeSoftKeyboard())
@@ -34,10 +34,11 @@ class LoginPage {
 
     }
 
-    fun login(userCredentials : UserCredentials) {
+    fun login(userCredentials: UserCredentials) {
         sideMenu.navigateToLoginPage()
         userLogin(userCredentials)
         viewActionsHelper.performClick(loginButton)
 
     }
 }
+
