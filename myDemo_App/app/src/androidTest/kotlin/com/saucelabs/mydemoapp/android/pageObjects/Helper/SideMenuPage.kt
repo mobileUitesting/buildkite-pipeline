@@ -36,6 +36,7 @@ class SideMenuPage :BasePage() {
 
     fun selectCatalogue() {
         clickMenu()
+        waitForSelectCatalogue()
         viewActionsHelper.performClick(itemTV)
     }
 
