@@ -11,7 +11,6 @@ import com.saucelabs.mydemoapp.android.pageObjects.Helper.SideMenuPage
 import com.saucelabs.mydemoapp.android.pageObjects.LoginPage
 import com.saucelabs.mydemoapp.android.pageObjects.PaymentDetailsPage
 import com.saucelabs.mydemoapp.android.pageObjects.PlaceOrderPage
-import com.saucelabs.mydemoapp.android.pageObjects.ProductCartPage
 import com.saucelabs.mydemoapp.android.pageObjects.ProductDetailsPage
 import com.saucelabs.mydemoapp.android.pageObjects.ProductHomePage
 import com.saucelabs.mydemoapp.android.view.activities.SplashActivity
@@ -27,7 +26,6 @@ class VerifyMultipleItemsAndProceedCheckout : BaseTest<SplashActivity>(SplashAct
     private val proudctHomePage = ProductHomePage()
     private val sideMenuPage = SideMenuPage()
     private val productdetailsPage = ProductDetailsPage()
-    private val productCartPage = ProductCartPage()
     private val checkOutDetailsPage = CheckOutDetailsPage()
     private val paymentDetailsPage = PaymentDetailsPage()
     private val placeOrderPage = PlaceOrderPage()
