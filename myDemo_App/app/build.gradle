@@ -98,6 +98,7 @@ repositories {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.databinding:databinding-compiler:8.8.0'
+    implementation 'com.google.firebase:firebase-perf-ktx:21.0.3'
 
     // Test Runner and Junit dependencies
     androidTestImplementation 'androidx.test:runner:1.4.0'
@@ -178,6 +179,7 @@ dependencies {
     implementation 'io.qameta.allure:allure-kotlin-model:2.4.0'
     testImplementation 'io.qameta.allure:allure-junit5:2.17.0'// For JUnit4
     implementation 'io.qameta.allure:allure-kotlin-android:2.4.0'
+    implementation 'com.jakewharton.timber:timber:5.0.1'
     androidTestImplementation("com.buildkite.test-collector-android:instrumented-test-collector:0.1.0")
 
 

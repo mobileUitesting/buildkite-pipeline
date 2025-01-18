@@ -1,10 +1,10 @@
 package com.saucelabs.mydemoapp.android.e2eTests.login
 
 
-import com.saucelabs.mydemoapp.android.pageObjects.Helper.LoginPage
+import com.saucelabs.mydemoapp.android.pageObjects.LoginPage
 import com.saucelabs.mydemoapp.android.base.BaseTest
 import com.saucelabs.mydemoapp.android.data.model.UserCredentials
-import com.saucelabs.mydemoapp.android.pageObjects.Helper.HomePage
+import com.saucelabs.mydemoapp.android.pageObjects.HomePage
 import com.saucelabs.mydemoapp.android.pageObjects.Helper.ViewActionsHelper
 import com.saucelabs.mydemoapp.android.data.DataBinder
 import com.saucelabs.mydemoapp.android.utils.annotations.Regression
@@ -15,7 +15,7 @@ import kotlin.test.fail
 
 
 
-class LoginWithValidCredentialsTest : BaseTest<SplashActivity>(SplashActivity::class.java) {
+class LoginTest : BaseTest<SplashActivity>(SplashActivity::class.java) {
 
     private val loginPage = LoginPage()
     private val homePage = HomePage()

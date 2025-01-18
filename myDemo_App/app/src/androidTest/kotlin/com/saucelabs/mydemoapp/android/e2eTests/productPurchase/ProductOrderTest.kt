@@ -4,13 +4,13 @@ package com.saucelabs.mydemoapp.android.e2eTests.productPurchase
 
 import com.saucelabs.mydemoapp.android.base.BaseTest
 import com.saucelabs.mydemoapp.android.data.model.UserCredentials
-import com.saucelabs.mydemoapp.android.pageObjects.Helper.CheckOutDetailsPage
-import com.saucelabs.mydemoapp.android.pageObjects.Helper.LoginPage
-import com.saucelabs.mydemoapp.android.pageObjects.Helper.PaymentDetailsPage
-import com.saucelabs.mydemoapp.android.pageObjects.Helper.PlaceOrderPage
-import com.saucelabs.mydemoapp.android.pageObjects.Helper.ProductCartPage
-import com.saucelabs.mydemoapp.android.pageObjects.Helper.ProductDetailsPage
-import com.saucelabs.mydemoapp.android.pageObjects.Helper.ProductHomePage
+import com.saucelabs.mydemoapp.android.pageObjects.CheckOutDetailsPage
+import com.saucelabs.mydemoapp.android.pageObjects.LoginPage
+import com.saucelabs.mydemoapp.android.pageObjects.PaymentDetailsPage
+import com.saucelabs.mydemoapp.android.pageObjects.PlaceOrderPage
+import com.saucelabs.mydemoapp.android.pageObjects.ProductCartPage
+import com.saucelabs.mydemoapp.android.pageObjects.ProductDetailsPage
+import com.saucelabs.mydemoapp.android.pageObjects.ProductHomePage
 import com.saucelabs.mydemoapp.android.data.DataBinder
 import com.saucelabs.mydemoapp.android.data.model.CardPaymentDetails
 import com.saucelabs.mydemoapp.android.data.model.ShippingDetails

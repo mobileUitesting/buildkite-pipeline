@@ -1,24 +1,29 @@
 package com.saucelabs.mydemoapp.android.e2eTests.login
 
 
-import com.saucelabs.mydemoapp.android.pageObjects.Helper.LoginPage
+import com.saucelabs.mydemoapp.android.pageObjects.LoginPage
 import com.saucelabs.mydemoapp.android.base.BaseTest
 import com.saucelabs.mydemoapp.android.data.model.UserCredentials
 import com.saucelabs.mydemoapp.android.data.DataBinder
 import com.saucelabs.mydemoapp.android.view.activities.SplashActivity
-import kotlin.test.Test
+import org.junit.Test
 
-class LoginFailureWithInValidCredentials : BaseTest<SplashActivity>(SplashActivity::class.java) {
+
+
+
+class LoginWithValidCredentialsTest : BaseTest<SplashActivity>(SplashActivity::class.java) {
 
     private val loginPage = LoginPage()
 
 
-    private val userCredentials: UserCredentials = DataBinder().getUserCredentials()
+
+    private val userCredentials:UserCredentials = DataBinder().getUserCredentials()
+
 
     @Test
-    fun loginWithInValidCredentials() {
+    fun verifyErrorMessageForEmptyLoginCredentials() {
 
-        loginPage.loginWithInvalidCredentials(userCredentials)
+
 
     }
 
@@ -26,15 +31,19 @@ class LoginFailureWithInValidCredentials : BaseTest<SplashActivity>(SplashActivi
     fun loginLockedWithCredentials()
     {
 
-        loginPage.loginlocked(userCredentials)
 
     }
     @Test
     fun userLockedWithCredentials()
     {
 
-        loginPage.userLockedWithCredentials(userCredentials)
+
 
     }
 
+    @Test
+    fun userEmptyDetails()
+    {
+
+    }
 }

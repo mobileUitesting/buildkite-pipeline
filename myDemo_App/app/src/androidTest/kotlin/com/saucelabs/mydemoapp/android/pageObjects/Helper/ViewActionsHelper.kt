@@ -10,8 +10,11 @@ import androidx.test.espresso.matcher.ViewMatchers.isDisplayed
 import androidx.test.espresso.matcher.ViewMatchers.withText
 import org.hamcrest.Matchers.allOf
 import android.view.View
+import androidx.recyclerview.widget.RecyclerView
 import androidx.test.espresso.UiController
 import androidx.test.espresso.ViewAction
+import androidx.test.espresso.contrib.RecyclerViewActions
+import androidx.test.espresso.matcher.ViewMatchers.hasDescendant
 import org.hamcrest.Matcher
 
 
@@ -24,6 +27,17 @@ class ViewActionsHelper {
         } catch (e: NoMatchingViewException) {
             return false
         }
+    }
+
+    fun performClick(viewId:ViewInteraction){
+        viewId.check(matches(isDisplayed()))
+            .perform(click())
+    }
+
+
+    fun performClick(text:String){
+        onView(withText(text))
+            .perform(click())
     }
 
     fun scrollToVisibleTextAndClick() {
@@ -48,5 +62,17 @@ class ViewActionsHelper {
         }
     }
 
-}
+    fun clickRecyclerViewItemByText(recyclerViewId: ViewInteraction,itemText:String){
+
+        recyclerViewId.perform(
+            RecyclerViewActions.scrollTo<RecyclerView.ViewHolder>(
+                hasDescendant(allOf(withText(itemText)))
+            )
+        ).perform(
+            RecyclerViewActions.actionOnItem<RecyclerView.ViewHolder>(
+                hasDescendant(allOf(withText(itemText))), click()
+            )
+        )
+    }
+   }
 

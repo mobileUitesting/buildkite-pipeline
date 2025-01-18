@@ -9,12 +9,10 @@ import com.saucelabs.mydemoapp.android.utils.JsonParser
 
 class DataBinder {
 
-    private lateinit var jsonLoader: JsonParser
+    private lateinit var jsonLoader:JsonParser
 
     fun getUserCredentials(): UserCredentials {
-
        jsonLoader = JsonParser()
-
         val userCredentials: UserCredentials =jsonLoader.parseJson("testdata/loginCredentials.json")
         return userCredentials
     }

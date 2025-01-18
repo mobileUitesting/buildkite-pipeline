@@ -8,6 +8,7 @@ import java.io.InputStream
 import java.io.InputStreamReader
 
 class JsonParser {
+
     private var json: JsonParser? = null
     inline fun <reified T> parseJson(jsonFilePath: String): T {
         val gson = Gson()

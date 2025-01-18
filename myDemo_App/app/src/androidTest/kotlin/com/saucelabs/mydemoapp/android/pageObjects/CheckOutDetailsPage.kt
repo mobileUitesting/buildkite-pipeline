@@ -7,6 +7,7 @@ import androidx.test.espresso.action.ViewActions.closeSoftKeyboard
 import androidx.test.espresso.action.ViewActions.typeText
 import androidx.test.espresso.matcher.ViewMatchers
 import com.saucelabs.mydemoapp.android.R
+import com.saucelabs.mydemoapp.android.data.model.ShippingDetails
 
 
 class CheckOutDetailsPage {

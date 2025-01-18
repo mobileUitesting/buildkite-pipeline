@@ -2,18 +2,12 @@ package com.saucelabs.mydemoapp.android.base
 
 import android.app.Activity
 import android.content.Context
-import androidx.test.core.app.ApplicationProvider
 import androidx.test.espresso.intent.Intents
 import androidx.test.ext.junit.rules.ActivityScenarioRule
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.uiautomator.UiDevice
-//import com.saucelabs.mydemoapp.android.utils.Logger
 import com.saucelabs.mydemoapp.android.sessionmanager.SessionManager
-import io.qameta.allure.android.rules.LogcatRule
-import io.qameta.allure.android.rules.ScreenshotRule
-import io.qameta.allure.android.rules.WindowHierarchyRule
-import io.qameta.allure.android.runners.AllureAndroidJUnit4
 import org.junit.After
 import org.junit.Before
 import org.junit.Rule

@@ -9,15 +9,19 @@ import androidx.test.espresso.matcher.ViewMatchers
 import androidx.test.espresso.matcher.ViewMatchers.hasDescendant
 import androidx.test.espresso.matcher.ViewMatchers.withText
 import com.saucelabs.mydemoapp.android.R
+import com.saucelabs.mydemoapp.android.base.BasePage
 import com.saucelabs.mydemoapp.android.pageObjects.Helper.ViewActionsHelper
 
 
-class HomePage {
+
+class HomePage : BasePage() {
+
 
     private val viewActionsHelper = ViewActionsHelper()
 
     private val recyclerViewId  : ViewInteraction = onView(ViewMatchers.withId(R.id.productRV))
     private val productsText: ViewInteraction = onView(ViewMatchers.withId(R.id.productTV))
+
 
 
     fun clickOnProductPosition() {

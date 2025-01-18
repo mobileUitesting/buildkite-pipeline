@@ -3,6 +3,7 @@ package com.saucelabs.mydemoapp.android.pageObjects
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.ViewInteraction
 import androidx.test.espresso.action.ViewActions.click
+import androidx.test.espresso.action.ViewActions.closeSoftKeyboard
 import androidx.test.espresso.action.ViewActions.typeText
 import androidx.test.espresso.matcher.ViewMatchers
 import com.saucelabs.mydemoapp.android.R
@@ -19,10 +20,10 @@ class PaymentDetailsPage {
 
     fun paymentDetailsSubmit(cardPaymentDetails : CardPaymentDetails)
     {
-        fullNameET.perform(typeText(cardPaymentDetails.fullName))
-        cardNumber.perform(typeText(cardPaymentDetails.cardNumber))
-        expiryDate.perform(typeText(cardPaymentDetails.expiryDate))
-        securityCode.perform(typeText(cardPaymentDetails.securityCode))
+        fullNameET.perform(typeText(cardPaymentDetails.fullName), closeSoftKeyboard())
+        cardNumber.perform(typeText(cardPaymentDetails.cardNumber),closeSoftKeyboard())
+        expiryDate.perform(typeText(cardPaymentDetails.expiryDate),closeSoftKeyboard())
+        securityCode.perform(typeText(cardPaymentDetails.securityCode),closeSoftKeyboard())
 
     }
     fun paymentOrderClick()

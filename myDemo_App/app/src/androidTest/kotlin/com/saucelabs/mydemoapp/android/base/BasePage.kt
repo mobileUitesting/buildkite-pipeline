@@ -1,16 +1,18 @@
 package com.saucelabs.mydemoapp.android.base
 
-import androidx.databinding.adapters.ViewBindingAdapter.OnViewAttachedToWindow
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.ViewInteraction
 import androidx.test.espresso.matcher.ViewMatchers.withId
 import com.saucelabs.mydemoapp.android.R
+import com.saucelabs.mydemoapp.android.pageObjects.Helper.ViewActionsHelper
+import com.saucelabs.mydemoapp.android.util.Wait
+
 //import com.saucelabs.mydemoapp.android.pageObjects.Helper.ViewActions
 //import com.saucelabs.mydemoapp.android.pageObjects.Helper.Wait
 
 open class BasePage {
 
- //   private val handleView = ViewActions()
+    private val viewActionHelper = ViewActionsHelper()
 
     private val menuIV: ViewInteraction = onView(withId(R.id.menuIV))
     private val sortIV: ViewInteraction = onView(withId(R.id.sortIV))
@@ -18,17 +20,17 @@ open class BasePage {
 
 
     fun clickOnSortButton() {
-    //    handleView.performClick(sortIV)
+        viewActionHelper.performClick(sortIV)
     }
     fun clickCart(){
         try {
-     //       handleView.performClick(cartRL)
+            viewActionHelper.performClick(cartRL)
         }catch (e: Exception){
             e.message
         }
     }
     fun clickMenu() {
-    //    Wait.waitView(menuIV)
-     //   handleView.performClick(menuIV)
+        Wait.waitFOrView(menuIV)
+        viewActionHelper.performClick(menuIV)
     }
 }
