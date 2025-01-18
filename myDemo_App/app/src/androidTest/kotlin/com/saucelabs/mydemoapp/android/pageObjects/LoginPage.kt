@@ -18,6 +18,7 @@ class LoginPage {
 
     private val viewActionsHelper = ViewActionsHelper()
     private val sideMenu = SideMenuPage()
+    private val loginPage = LoginPage()
 
 
     private val userEmail: ViewInteraction = onView(ViewMatchers.withId(R.id.nameET))
@@ -41,4 +42,6 @@ class LoginPage {
 
     }
 }
+
+
 

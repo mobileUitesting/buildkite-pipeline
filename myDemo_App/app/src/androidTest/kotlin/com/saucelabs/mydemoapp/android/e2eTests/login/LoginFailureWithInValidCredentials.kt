@@ -15,8 +15,8 @@ class LoginWithValidCredentialsTest : BaseTest<SplashActivity>(SplashActivity::c
 
 
     @Test
-    fun verifyErrorMessageForEmptyLoginCredentials(username: String, password : String) {
-        loginPage.login()
+
+    fun loginWithInValidCredentials() {
 
 
     }
