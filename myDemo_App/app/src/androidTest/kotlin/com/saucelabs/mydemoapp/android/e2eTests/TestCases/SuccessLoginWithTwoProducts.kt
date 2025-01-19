@@ -13,10 +13,12 @@ import com.saucelabs.mydemoapp.android.pageObjects.PlaceOrderPage
 import com.saucelabs.mydemoapp.android.pageObjects.ProductCartPage
 import com.saucelabs.mydemoapp.android.pageObjects.ProductDetailsPage
 import com.saucelabs.mydemoapp.android.pageObjects.ProductHomePage
+import com.saucelabs.mydemoapp.android.utils.annotations.Regression
 import com.saucelabs.mydemoapp.android.view.activities.SplashActivity
+import io.qameta.allure.kotlin.junit4.Tag
 import org.junit.Test
 
-class SuccessLoginWithTwoProductsAddedToCart: BaseTest<SplashActivity>(SplashActivity::class.java) {
+class SuccessLoginWithTwoProducts: BaseTest<SplashActivity>(SplashActivity::class.java) {
 
 
     private val userCredentials: UserCredentials = DataBinder().getUserCredentials()
@@ -31,7 +33,8 @@ class SuccessLoginWithTwoProductsAddedToCart: BaseTest<SplashActivity>(SplashAct
     private val paymentDetailsPage = PaymentDetailsPage()
     private val placeOrderPage = PlaceOrderPage()
 
-
+    @Regression
+    @Tag("regression")
     @Test
     fun loginSuccessWithTwoProductsOrder()
     {

@@ -2,6 +2,8 @@ package com.saucelabs.mydemoapp.android.e2eTests.testSuites
 
 
 
+import com.saucelabs.mydemoapp.android.e2eTests.TestCases.SuccessLoginWithTwoProducts
+import com.saucelabs.mydemoapp.android.e2eTests.TestCases.VerifyItemRemovalFromCart
 import com.saucelabs.mydemoapp.android.e2eTests.login.LoginTest
 import com.saucelabs.mydemoapp.android.e2eTests.productPurchase.ProductOrderTest
 import com.saucelabs.mydemoapp.android.pageObjects.Helper.LogoutTest
@@ -15,7 +17,10 @@ class RegressionTestSuite {
     @Suite.SuiteClasses(
         LoginTest::class,
         LogoutTest::class,
-        ProductOrderTest::class
+        ProductOrderTest::class,
+        SuccessLoginWithTwoProducts::class,
+        VerifyItemRemovalFromCart::class
+
 
     )
     class RegressionSuite
