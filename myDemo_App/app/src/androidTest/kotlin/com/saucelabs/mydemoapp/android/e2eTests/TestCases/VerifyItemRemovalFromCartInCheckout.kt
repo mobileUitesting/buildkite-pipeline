@@ -5,6 +5,7 @@ import com.saucelabs.mydemoapp.android.base.BaseTest
 import com.saucelabs.mydemoapp.android.data.DataBinder
 import com.saucelabs.mydemoapp.android.data.model.UserCredentials
 import com.saucelabs.mydemoapp.android.pageObjects.Helper.SideMenuPage
+import com.saucelabs.mydemoapp.android.pageObjects.HomePage
 import com.saucelabs.mydemoapp.android.pageObjects.LoginPage
 import com.saucelabs.mydemoapp.android.pageObjects.ProductCartPage
 import com.saucelabs.mydemoapp.android.pageObjects.ProductDetailsPage
@@ -17,6 +18,7 @@ class VerifyItemRemovalFromCartInCheckout : BaseTest<SplashActivity>(SplashActiv
     private val userCredentials: UserCredentials = DataBinder().getUserCredentials()
 
     private val loginPage = LoginPage()
+    private val homePage = HomePage()
     private val proudctHomePage = ProductHomePage()
     private val sideMenuPage = SideMenuPage()
     private val productdetailsPage = ProductDetailsPage()
@@ -34,6 +36,6 @@ class VerifyItemRemovalFromCartInCheckout : BaseTest<SplashActivity>(SplashActiv
         productdetailsPage.cartClick()
         productCartPage.productRemoveFromList()
         productCartPage.EmptyCartClick()
-
+        homePage.isProductTextDisplayed()
     }
 }

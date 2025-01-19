@@ -2,7 +2,6 @@ package com.saucelabs.mydemoapp.android.pageObjects.Helper
 
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.ViewInteraction
-import androidx.test.espresso.action.ViewActions.click
 import androidx.test.espresso.matcher.ViewMatchers.withId
 import com.saucelabs.mydemoapp.android.R
 import com.saucelabs.mydemoapp.android.base.BasePage
@@ -12,6 +11,7 @@ import com.saucelabs.mydemoapp.android.util.Wait
 class SideMenuPage :BasePage() {
 
     private val viewActionsHelper = ViewActionsHelper()
+
 
     private val menuRV: ViewInteraction = onView(withId(R.id.menuRV))
     private val itemTV: ViewInteraction = onView(withId(R.id.itemTV))
@@ -36,8 +36,7 @@ class SideMenuPage :BasePage() {
 
     fun selectCatalogue() {
         clickMenu()
-        waitForSelectCatalogue()
-        viewActionsHelper.performClick(itemTV)
+        viewActionsHelper.performClick(AppConstants.CATALOG)
     }
 
 

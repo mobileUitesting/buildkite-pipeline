@@ -14,9 +14,15 @@ object AppConstants {
     const val LOGIN_TITLE1="Login"
     const val LOG_OUT = "Log Out"
     const val LOG_OUT1 = "LOGOUT"
+    const val CATALOG="Catalog"
+    const val CATALOG_TITLE="Catalog"
 
     const val CHECKOUT_COMPLETE="Checkout Complete"
     const val  TOTAL_ITEMS_2="2 Items"
 
+    //Empty cart
+
+    const val GOSHOPPING = "Go Shopping"
+    const val GoShopping_TITLE = "Go Shopping"
 
 }

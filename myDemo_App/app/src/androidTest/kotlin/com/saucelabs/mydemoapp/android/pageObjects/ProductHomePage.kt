@@ -14,10 +14,10 @@ import com.saucelabs.mydemoapp.android.R
 
 class ProductHomePage {
 
-    private val menuView : ViewInteraction = onView(ViewMatchers.withId(R.id.menuIV))
-    private val sortView : ViewInteraction = onView(ViewMatchers.withId(R.id.sortIV))
-    private val cartView : ViewInteraction = onView(ViewMatchers.withId(R.id.cartRL))
-    private val assertAction : ViewInteraction= onView(ViewMatchers.withText("Sauce Labs BackPack"))
+    private val menuView: ViewInteraction = onView(ViewMatchers.withId(R.id.menuIV))
+    private val sortView: ViewInteraction = onView(ViewMatchers.withId(R.id.sortIV))
+    private val cartView: ViewInteraction = onView(ViewMatchers.withId(R.id.cartRL))
+    private val assertAction: ViewInteraction = onView(ViewMatchers.withText("Sauce Labs BackPack (orange)"))
 
     fun clickOnProductPosition() {
         onView(withId(R.id.productRV))
@@ -26,13 +26,14 @@ class ProductHomePage {
                     0,
                     click()))
     }
-}
-fun clickOnProductByText(text: String) {
-    onView(withId(R.id.productRV))
-        .perform(
-            RecyclerViewActions.actionOnItem<RecyclerView.ViewHolder>(
-                hasDescendant(withText(text)),
-                click()
+
+      fun clickOnProductByText(text: String) {
+        onView(withId(R.id.productRV))
+            .perform(
+                RecyclerViewActions.actionOnItem<RecyclerView.ViewHolder>(
+                    hasDescendant(withText(text)),
+                    click()
+                )
             )
-        )
+    }
 }

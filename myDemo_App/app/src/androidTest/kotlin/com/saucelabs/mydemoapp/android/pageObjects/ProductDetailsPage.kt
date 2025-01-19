@@ -29,22 +29,28 @@ class ProductDetailsPage {
             )
     }
 
-    fun clickOnProductPositionOne(position: Int) {
-        onView(withId(R.id.productRV))
+    fun productColorClickFirst(position: Int) {
+        // Locate the RecyclerView with color options and click on the item at the given position
+        onView(withId(R.id.colorRV)) // Replace with the actual ID of your RecyclerView
             .perform(
                 RecyclerViewActions.actionOnItemAtPosition<RecyclerView.ViewHolder>(
-                    1,
-                    click()))
+                    position,
+                    click()   // Action to perform
+                )
+            )
     }
 
-    fun clickOnProductPositionThree(position: Int)
-    {
-        onView(withId(R.id.productRV))
+    fun productColorClickThird(position: Int) {
+        // Locate the RecyclerView with color options and click on the item at the given position
+        onView(withId(R.id.colorRV)) // Replace with the actual ID of your RecyclerView
             .perform(
                 RecyclerViewActions.actionOnItemAtPosition<RecyclerView.ViewHolder>(
-                    3,
-                    click()))
+                    position,
+                    click()   // Action to perform
+                )
+            )
     }
+
 
     fun productCartSelect()
     {
