@@ -1,40 +1,43 @@
-package com.saucelabs.mydemoapp.android.util
+package com.saucelabs.mydemoapp.android.utils
 
+import android.content.Context
 import android.util.Log
-import timber.log.Timber
+import java.io.File
+import java.io.FileWriter
+import java.io.IOException
 
 object Logger {
+    private const val TAG = "EspressoTest"
+    private var logFile: File? = null
 
-    /**
-     * Initialize Timber for logging.
-     * @param isDebug true for Debug builds, false for Release builds.
-     */
-    fun init(isDebug: Boolean) {
-        if (isDebug) {
-            Timber.plant(Timber.DebugTree())
-        } else {
-            Timber.plant(ReleaseTree())
+    fun initialize(context: Context) {
+        logFile = File(context.filesDir, "test_logs.txt")
+    }
+    private fun writeToFile(message: String) {
+        try {
+            logFile?.let {
+                val writer = FileWriter(it, true)
+                writer.appendLine(message)
+                writer.close()
+            }
+        } catch (e: IOException) {
+            Log.e(TAG, "Failed to write log to file", e)
         }
     }
-
-    // Logging wrapper functions
-    fun d(message: String, vararg args: Any?) = Timber.d(message, *args)
-    fun e(message: String, vararg args: Any?) = Timber.e(message, *args)
-    fun i(message: String, vararg args: Any?) = Timber.i(message, *args)
-    fun w(message: String, vararg args: Any?) = Timber.w(message, *args)
-    fun wtf(message: String, vararg args: Any?) = Timber.wtf(message, *args)
-    fun e(t: Throwable, message: String, vararg args: Any?) = Timber.e(t, message, *args)
-
-    /**
-     * Custom Release Tree to log only WARN, ERROR, and WTF in production.
-     */
-    private class ReleaseTree : Timber.Tree() {
-        override fun log(priority: Int, tag: String?, message: String, t: Throwable?) {
-            if (priority == Log.VERBOSE || priority == Log.DEBUG) {
-                return // Skip logging for VERBOSE and DEBUG levels
-            }
-            Log.println(priority, tag ?: "ReleaseLogger", message)
-            t?.let { Log.e(tag ?: "ReleaseLogger", message, it) }
-        }
+    fun logInfo(message: String) {
+        Log.i(TAG, message)
+        writeToFile("INFO: $message")
+    }
+    fun logError(message: String, throwable: Throwable? = null) {
+        Log.e(TAG, message, throwable)
+        writeToFile("ERROR: $message")
+    }
+    fun logDebug(message: String) {
+        Log.d(TAG, message)
+        writeToFile("DEBUG: $message")
+    }
+    fun logWarning(message: String) {
+        Log.w(TAG, message)
+        writeToFile("WARNING: $message")
     }
 }
