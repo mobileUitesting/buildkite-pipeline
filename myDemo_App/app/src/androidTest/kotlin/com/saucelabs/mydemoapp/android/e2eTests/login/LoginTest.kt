@@ -34,8 +34,7 @@ class LoginTest : BaseTest<SplashActivity>(SplashActivity::class.java) {
                 homePage.isProductTextDisplayed()
 
             } catch (e: Exception) {
-                // Handle unexpected exceptions and fail the test
-                fail("Test failed due to an unexpected exception: ${e.message}")
+              fail("Test failed due to an unexpected exception: ${e.message}")
             }
         }
 
